@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "vHXxckKmIwE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SmartExpenseTracker.Infrastructure.IdGenerators.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\email\\.nuget\\packages\\idgen\\3.0.7\\idgen.3.0.7.nupkg.sha512",
+    "C:\\Users\\email\\.nuget\\packages\\idgen.dependencyinjection\\3.0.7\\idgen.dependencyinjection.3.0.7.nupkg.sha512",
+    "C:\\Users\\email\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\email\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\email\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Core.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Core.ApplicationService", "1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj", "{F76A6947-003D-455F-BD6C-57335562790D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.IdGenerators", "2.Infrastructure\SmartExpenseTracker.Infrastructure.IdGenerators\SmartExpenseTracker.Infrastructure.IdGenerators.csproj", "{8609C347-C961-4A99-AA67-74245CF3B704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F76A6947-003D-455F-BD6C-57335562790D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F76A6947-003D-455F-BD6C-57335562790D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F76A6947-003D-455F-BD6C-57335562790D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8609C347-C961-4A99-AA67-74245CF3B704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8609C347-C961-4A99-AA67-74245CF3B704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8609C347-C961-4A99-AA67-74245CF3B704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8609C347-C961-4A99-AA67-74245CF3B704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{984EDA7F-0763-4A53-927C-1D42D49801E3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F76A6947-003D-455F-BD6C-57335562790D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8609C347-C961-4A99-AA67-74245CF3B704} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B00F177A-5826-43F5-9787-CF0E6E60F631}
