@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q+32iybVL58=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\email\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

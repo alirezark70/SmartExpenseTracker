@@ -84,6 +84,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/SmartExpenseTracker.Core.ApplicationService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartExpenseTracker.Core.ApplicationService.dll": {}
+        }
       }
     }
   },
@@ -225,13 +235,19 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
+      "type": "project",
+      "path": "../../1.Core/SmartExpenseTracker.Core.ApplicationService/SmartExpenseTracker.Core.ApplicationService.csproj",
+      "msbuildProject": "../../1.Core/SmartExpenseTracker.Core.ApplicationService/SmartExpenseTracker.Core.ApplicationService.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "IdGen >= 3.0.7",
       "IdGen.DependencyInjection >= 3.0.7",
-      "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.8"
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.8",
+      "SmartExpenseTracker.Core.ApplicationService >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -265,7 +281,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj": {
+              "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

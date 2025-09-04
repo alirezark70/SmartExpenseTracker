@@ -1,0 +1,126 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SmartExpenseTracker.Infrastructure.IdGenerators/1.0.0": {
+        "dependencies": {
+          "IdGen": "3.0.7",
+          "IdGen.DependencyInjection": "3.0.7",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "SmartExpenseTracker.Core.ApplicationService": "1.0.0"
+        },
+        "runtime": {
+          "SmartExpenseTracker.Infrastructure.IdGenerators.dll": {}
+        }
+      },
+      "IdGen/3.0.7": {
+        "runtime": {
+          "lib/netstandard2.0/IdGen.dll": {
+            "assemblyVersion": "3.0.7.0",
+            "fileVersion": "3.0.7.0"
+          }
+        }
+      },
+      "IdGen.DependencyInjection/3.0.7": {
+        "dependencies": {
+          "IdGen": "3.0.7",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdGen.DependencyInjection.dll": {
+            "assemblyVersion": "3.0.7.0",
+            "fileVersion": "3.0.7.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/8.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.224.6711"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
+        "runtime": {
+          "SmartExpenseTracker.Core.ApplicationService.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SmartExpenseTracker.Infrastructure.IdGenerators/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IdGen/3.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pynYNXHCteidWueEX8mT72+Ue9FfwyMe+cx2YNJVrRWYGrfVLqdC0Xjv9IwuAkUQ8usV5JKwUPFJFh5eVi/XMg==",
+      "path": "idgen/3.0.7",
+      "hashPath": "idgen.3.0.7.nupkg.sha512"
+    },
+    "IdGen.DependencyInjection/3.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jIKjyJSosKtmGtg3v4t3lHdc5zQnZoyt4liJfWqMn22kxobuoy8wanpvYuSCBeo4vKRGhwjbMEkkOdKXQHyspw==",
+      "path": "idgen.dependencyinjection/3.0.7",
+      "hashPath": "idgen.dependencyinjection.3.0.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xY3lTjj4+ZYmiKIkyWitddrp1uL5uYiweQjqo4BKBw01ZC4HhcfgLghDpPZcUlppgWAFqFy9SgkiYWOMx365pw==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.8",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/8.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dWGKvhFybsaZpGmzkGCbNNwBD1rVlWzrZKANLW/CcbFJpCEceMCGzT7zZwHOGBCbwM0SzBuceMj5HN1LKV1QqA==",
+      "path": "microsoft.extensions.options/8.0.2",
+      "hashPath": "microsoft.extensions.options.8.0.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g==",
+      "path": "microsoft.extensions.primitives/8.0.0",
+      "hashPath": "microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    },
+    "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

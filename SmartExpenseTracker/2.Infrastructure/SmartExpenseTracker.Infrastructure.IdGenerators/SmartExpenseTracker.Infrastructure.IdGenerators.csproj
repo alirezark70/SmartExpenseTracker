@@ -11,5 +11,9 @@
     <PackageReference Include="IdGen.DependencyInjection" Version="3.0.7" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj" />
+  </ItemGroup>
   
 </Project>
