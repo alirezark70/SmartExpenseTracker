@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
               "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
               "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-04T22:49:39.99Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\DateTimeProvider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:47:50.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T22:47:50.36Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\Extentions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:40:48.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T22:40:48.46Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Contracts\\IIdGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:37:26.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T22:37:26.655Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SnowflakeIdGenerator.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:35:38.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T22:35:38.759Z"
             }
           ]
         }
