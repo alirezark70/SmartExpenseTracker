@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infrastructure\\smartexpensetracker.infrastructure.simpledatetime\\extenstions\\dependencyinjection\\simpledatetimeregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj|solutionrelative:2.infrastructure\\smartexpensetracker.infrastructure.simpledatetime\\extenstions\\dependencyinjection\\simpledatetimeregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infrastructure\\smartexpensetracker.infrastructure.simpledatetime\\datetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj|solutionrelative:2.infrastructure\\smartexpensetracker.infrastructure.simpledatetime\\datetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\exceptions\\apiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\exceptions\\apiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8609C347-C961-4A99-AA67-74245CF3B704}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SmartExpenseTracker.Infrastructure.IdGenerators.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infrastructure\\smartexpensetracker.infrastructure.idgenerators\\extentions\\dependencyinjection\\snowflakeidgeneratorregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8609C347-C961-4A99-AA67-74245CF3B704}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SmartExpenseTracker.Infrastructure.IdGenerators.csproj|solutionrelative:2.infrastructure\\smartexpensetracker.infrastructure.idgenerators\\extentions\\dependencyinjection\\snowflakeidgeneratorregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8609C347-C961-4A99-AA67-74245CF3B704}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SmartExpenseTracker.Infrastructure.IdGenerators.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infrastructure\\smartexpensetracker.infrastructure.idgenerators\\snowflakeidgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8609C347-C961-4A99-AA67-74245CF3B704}|2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SmartExpenseTracker.Infrastructure.IdGenerators.csproj|solutionrelative:2.infrastructure\\smartexpensetracker.infrastructure.idgenerators\\snowflakeidgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\contracts\\iidgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\contracts\\iidgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\3.endpoint\\smartexpensetracker.endpoint.restapi\\filters\\globalexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|solutionrelative:3.endpoint\\smartexpensetracker.endpoint.restapi\\filters\\globalexceptionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiException.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ApiException.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ApiException.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ApiException.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ApiException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T19:10:04.981Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -43,63 +48,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SimpleDateTimeRegistrer.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
-              "RelativeDocumentMoniker": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
-              "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\Extenstions\\DependencyInjection\\SimpleDateTimeRegistrer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Title": "ValidationException.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ValidationException.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ValidationException.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ValidationException.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Exceptions\\ValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:49:39.99Z",
+              "WhenOpened": "2025-09-06T19:06:50.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DateTimeProvider.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\DateTimeProvider.cs",
-              "RelativeDocumentMoniker": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\DateTimeProvider.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\DateTimeProvider.cs",
-              "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\DateTimeProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:47:50.36Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SnowflakeIdGeneratorRegistrer.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\Extentions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
-              "RelativeDocumentMoniker": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\Extentions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\Extentions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
-              "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\Extentions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABzAAAAAAAAAA==",
+              "Title": "GlobalExceptionFilter.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\GlobalExceptionFilter.cs",
+              "RelativeDocumentMoniker": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\GlobalExceptionFilter.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\GlobalExceptionFilter.cs",
+              "RelativeToolTip": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\GlobalExceptionFilter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:40:48.46Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IIdGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Contracts\\IIdGenerator.cs",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Contracts\\IIdGenerator.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Contracts\\IIdGenerator.cs",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Contracts\\IIdGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:37:26.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SnowflakeIdGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SnowflakeIdGenerator.cs",
-              "RelativeDocumentMoniker": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SnowflakeIdGenerator.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SnowflakeIdGenerator.cs",
-              "RelativeToolTip": "2.Infrastructure\\SmartExpenseTracker.Infrastructure.IdGenerators\\SnowflakeIdGenerator.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T22:35:38.759Z"
+              "WhenOpened": "2025-09-06T19:05:31.992Z",
+              "EditorCaption": ""
             }
           ]
         }

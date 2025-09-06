@@ -21,11 +21,24 @@
       "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "SmartExpenseTracker.Core.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SmartExpenseTracker.Core.ApplicationService.dll": {}
         },
         "runtime": {
           "bin/placeholder/SmartExpenseTracker.Core.ApplicationService.dll": {}
+        }
+      },
+      "SmartExpenseTracker.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/SmartExpenseTracker.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartExpenseTracker.Core.Domain.dll": {}
         }
       }
     }
@@ -65,6 +78,11 @@
       "type": "project",
       "path": "../../1.Core/SmartExpenseTracker.Core.ApplicationService/SmartExpenseTracker.Core.ApplicationService.csproj",
       "msbuildProject": "../../1.Core/SmartExpenseTracker.Core.ApplicationService/SmartExpenseTracker.Core.ApplicationService.csproj"
+    },
+    "SmartExpenseTracker.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../1.Core/SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj",
+      "msbuildProject": "../../1.Core/SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

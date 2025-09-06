@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "SmartExpenseTracker.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/SmartExpenseTracker.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartExpenseTracker.Core.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SmartExpenseTracker.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj",
+      "msbuildProject": "../SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "SmartExpenseTracker.Core.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\email\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj": {
+              "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
