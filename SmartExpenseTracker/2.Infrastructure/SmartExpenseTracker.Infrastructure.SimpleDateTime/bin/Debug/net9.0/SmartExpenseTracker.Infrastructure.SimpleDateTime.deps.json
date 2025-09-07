@@ -24,8 +24,19 @@
         }
       },
       "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
+        "dependencies": {
+          "SmartExpenseTracker.Core.Domain": "1.0.0"
+        },
         "runtime": {
           "SmartExpenseTracker.Core.ApplicationService.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SmartExpenseTracker.Core.Domain/1.0.0": {
+        "runtime": {
+          "SmartExpenseTracker.Core.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -47,6 +58,11 @@
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"
     },
     "SmartExpenseTracker.Core.ApplicationService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SmartExpenseTracker.Core.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

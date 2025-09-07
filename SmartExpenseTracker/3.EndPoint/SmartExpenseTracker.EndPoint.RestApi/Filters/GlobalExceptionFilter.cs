@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using SmartExpenseTracker.Core.ApplicationService.DataTransfareObject.Response;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using SmartExpenseTracker.Core.Domain.Enums.Response;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
-using validaationEx = SmartExpenseTracker.Core.ApplicationService.Exceptions.ValidationException;
+using validaationEx = SmartExpenseTracker.Core.ApplicationService.DataTransfareObject.Response.ValidationException;
 
 namespace SmartExpenseTracker.EndPoint.RestApi.Filters
 {

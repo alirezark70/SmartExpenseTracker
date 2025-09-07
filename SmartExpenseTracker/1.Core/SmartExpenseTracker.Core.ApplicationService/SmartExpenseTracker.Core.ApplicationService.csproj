@@ -10,4 +10,8 @@
     <ProjectReference Include="..\SmartExpenseTracker.Core.Domain\SmartExpenseTracker.Core.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
 </Project>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Core.ApplicationService.Exceptions
+namespace SmartExpenseTracker.Core.ApplicationService.DataTransfareObject.Response
 {
     public class ApiException : Exception
     {
