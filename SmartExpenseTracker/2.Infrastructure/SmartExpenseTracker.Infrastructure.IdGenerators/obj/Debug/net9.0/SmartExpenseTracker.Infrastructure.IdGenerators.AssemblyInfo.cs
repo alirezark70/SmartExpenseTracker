@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.Infrastructure.IdGenerators")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+105102ac810a9fdcfb159f7c98a3d0b22a97ffc3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9b1d48694d62d791a81890efeb8c73049bcbebf")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.Infrastructure.IdGenerators")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.Infrastructure.IdGenerators")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
