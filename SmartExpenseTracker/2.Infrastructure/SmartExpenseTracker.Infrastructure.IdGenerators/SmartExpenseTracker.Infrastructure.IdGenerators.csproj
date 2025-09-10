@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="IdGen" Version="3.0.7" />
     <PackageReference Include="IdGen.DependencyInjection" Version="3.0.7" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.9" />
   </ItemGroup>
 
   <ItemGroup>
