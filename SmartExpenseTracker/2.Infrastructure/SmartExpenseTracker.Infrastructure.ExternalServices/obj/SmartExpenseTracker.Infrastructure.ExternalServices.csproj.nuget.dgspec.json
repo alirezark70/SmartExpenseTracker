@@ -49,52 +49,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "App.Metrics": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "App.Metrics.Extensions.Hosting": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.5.1, )"
-            },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
-              "target": "Package",
-              "version": "[9.0.9, )"
-            },
-            "Microsoft.Extensions.Http": {
-              "target": "Package",
-              "version": "[9.0.9, )"
-            },
-            "Microsoft.Extensions.Http.Resilience": {
-              "target": "Package",
-              "version": "[9.9.0, )"
-            },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[9.0.9, )"
-            },
-            "Microsoft.Extensions.Options": {
-              "target": "Package",
-              "version": "[9.0.9, )"
-            },
-            "Microsoft.Extensions.Resilience": {
-              "target": "Package",
-              "version": "[9.9.0, )"
-            },
-            "Polly": {
-              "target": "Package",
-              "version": "[8.6.3, )"
-            },
-            "Scrutor": {
-              "target": "Package",
-              "version": "[6.1.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

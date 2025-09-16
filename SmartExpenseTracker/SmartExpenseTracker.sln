@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.EndPoin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.ExternalServices", "2.Infrastructure\SmartExpenseTracker.Infrastructure.ExternalServices\SmartExpenseTracker.Infrastructure.ExternalServices.csproj", "{549BE8F3-227F-43BF-89C4-B8586C603ED1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.Resilience", "2.Infrastructure\SmartExpenseTracker.Infrastructure.Resilience\SmartExpenseTracker.Infrastructure.Resilience.csproj", "{164F69C8-D428-40B0-9FAC-63D296015BFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{549BE8F3-227F-43BF-89C4-B8586C603ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{549BE8F3-227F-43BF-89C4-B8586C603ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{549BE8F3-227F-43BF-89C4-B8586C603ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 		{5A3002B8-0F97-4C5B-B2EC-7A77F988096E} = {53A57DA4-BBB1-45F7-B371-329E83E4A0CE}
 		{549BE8F3-227F-43BF-89C4-B8586C603ED1} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
+		{164F69C8-D428-40B0-9FAC-63D296015BFF} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B00F177A-5826-43F5-9787-CF0E6E60F631}
