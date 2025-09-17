@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Core", "1.Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infrastructure", "2.Infrastructure", "{A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Infra", "2.Infra", "{A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.EndPoint", "3.EndPoint", "{53A57DA4-BBB1-45F7-B371-329E83E4A0CE}"
 EndProject
@@ -13,15 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Core.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Core.ApplicationService", "1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj", "{F76A6947-003D-455F-BD6C-57335562790D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.IdGenerators", "2.Infrastructure\SmartExpenseTracker.Infrastructure.IdGenerators\SmartExpenseTracker.Infrastructure.IdGenerators.csproj", "{8609C347-C961-4A99-AA67-74245CF3B704}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.IdGenerators", "2.Infrastructure\SmartExpenseTracker.Infrastructure.IdGenerators\SmartExpenseTracker.Infra.IdGenerators.csproj", "{8609C347-C961-4A99-AA67-74245CF3B704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.SimpleDateTime", "2.Infrastructure\SmartExpenseTracker.Infrastructure.SimpleDateTime\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj", "{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.SimpleDateTime", "2.Infrastructure\SmartExpenseTracker.Infrastructure.SimpleDateTime\SmartExpenseTracker.Infra.SimpleDateTime.csproj", "{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.EndPoint.RestApi", "3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\SmartExpenseTracker.EndPoint.RestApi.csproj", "{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.ExternalServices", "2.Infrastructure\SmartExpenseTracker.Infrastructure.ExternalServices\SmartExpenseTracker.Infrastructure.ExternalServices.csproj", "{549BE8F3-227F-43BF-89C4-B8586C603ED1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.ExternalServices", "2.Infrastructure\SmartExpenseTracker.Infrastructure.ExternalServices\SmartExpenseTracker.Infra.ExternalServices.csproj", "{549BE8F3-227F-43BF-89C4-B8586C603ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infrastructure.Resilience", "2.Infrastructure\SmartExpenseTracker.Infrastructure.Resilience\SmartExpenseTracker.Infrastructure.Resilience.csproj", "{164F69C8-D428-40B0-9FAC-63D296015BFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.Resilience", "2.Infrastructure\SmartExpenseTracker.Infrastructure.Resilience\SmartExpenseTracker.Infra.Resilience.csproj", "{164F69C8-D428-40B0-9FAC-63D296015BFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

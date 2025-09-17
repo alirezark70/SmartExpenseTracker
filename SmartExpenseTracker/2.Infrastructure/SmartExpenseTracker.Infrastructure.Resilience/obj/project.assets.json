@@ -2966,9 +2966,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\SmartExpenseTracker.Infrastructure.Resilience.csproj",
-      "projectName": "SmartExpenseTracker.Infrastructure.Resilience",
-      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\SmartExpenseTracker.Infrastructure.Resilience.csproj",
+      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\SmartExpenseTracker.Infra.Resilience.csproj",
+      "projectName": "SmartExpenseTracker.Infra.Resilience",
+      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\SmartExpenseTracker.Infra.Resilience.csproj",
       "packagesPath": "C:\\Users\\email\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\obj\\",
       "projectStyle": "PackageReference",

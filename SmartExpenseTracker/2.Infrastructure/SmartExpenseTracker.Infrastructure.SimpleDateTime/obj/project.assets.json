@@ -1188,9 +1188,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj",
-      "projectName": "SmartExpenseTracker.Infrastructure.SimpleDateTime",
-      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infrastructure.SimpleDateTime.csproj",
+      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infra.SimpleDateTime.csproj",
+      "projectName": "SmartExpenseTracker.Infra.SimpleDateTime",
+      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\SmartExpenseTracker.Infra.SimpleDateTime.csproj",
       "packagesPath": "C:\\Users\\email\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.SimpleDateTime\\obj\\",
       "projectStyle": "PackageReference",

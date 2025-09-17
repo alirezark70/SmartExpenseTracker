@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.ExternalServices\\SmartExpenseTracker.Infrastructure.ExternalServices.csproj",
-      "projectName": "SmartExpenseTracker.Infrastructure.ExternalServices",
-      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.ExternalServices\\SmartExpenseTracker.Infrastructure.ExternalServices.csproj",
+      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj",
+      "projectName": "SmartExpenseTracker.Infra.ExternalServices",
+      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj",
       "packagesPath": "C:\\Users\\email\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.ExternalServices\\obj\\",
       "projectStyle": "PackageReference",

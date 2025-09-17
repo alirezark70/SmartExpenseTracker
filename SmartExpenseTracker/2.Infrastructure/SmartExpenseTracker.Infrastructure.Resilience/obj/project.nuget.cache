@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iRoMr7gupPo=",
+  "dgSpecHash": "vmM50FMX5FE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\SmartExpenseTracker.Infrastructure.Resilience.csproj",
+  "projectFilePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infrastructure\\SmartExpenseTracker.Infrastructure.Resilience\\SmartExpenseTracker.Infra.Resilience.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\email\\.nuget\\packages\\app.metrics\\4.3.0\\app.metrics.4.3.0.nupkg.sha512",
     "C:\\Users\\email\\.nuget\\packages\\app.metrics.abstractions\\4.3.0\\app.metrics.abstractions.4.3.0.nupkg.sha512",

@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SmartExpenseTracker.Core.ApplicationService.Contracts;
-using SmartExpenseTracker.Infrastructure.SimpleDateTime;
+using SmartExpenseTracker.Infra.SimpleDateTime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Infrastructure.Extenstions.DependencyInjection
+namespace SmartExpenseTracker.Infra.SimpleDateTime.Extenstions.DependencyInjection
 {
     public static class SimpleDateTimeRegistrer
     {

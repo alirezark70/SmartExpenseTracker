@@ -1,13 +1,13 @@
 ﻿using IdGen.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using SmartExpenseTracker.Infrastructure.IdGenerators;
+using SmartExpenseTracker.Infra.IdGenerators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Infrastructure.Extentions.DependencyInjection
+namespace SmartExpenseTracker.Infra.IdGenerators.Extentions.DependencyInjection
 {
     public  static class SnowflakeIdGeneratorRegistrer
     {
@@ -15,7 +15,7 @@ namespace SmartExpenseTracker.Infrastructure.Extentions.DependencyInjection
                                                                          int idGeneratorId)
         {
             services.AddIdGen(idGeneratorId);
-            services.AddSingleton<SmartExpenseTracker.Core.ApplicationService.Contracts.IIdGenerator<long>, SnowflakeIdGenerator>();
+            services.AddSingleton<Core.ApplicationService.Contracts.IIdGenerator<long>, SnowflakeIdGenerator>();
             return services;
         }
     }
