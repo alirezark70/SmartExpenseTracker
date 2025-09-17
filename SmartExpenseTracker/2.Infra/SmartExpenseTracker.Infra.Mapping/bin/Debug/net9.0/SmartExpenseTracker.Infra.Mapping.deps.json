@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+        "runtime": {
+          "SmartExpenseTracker.Infra.Mapping.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

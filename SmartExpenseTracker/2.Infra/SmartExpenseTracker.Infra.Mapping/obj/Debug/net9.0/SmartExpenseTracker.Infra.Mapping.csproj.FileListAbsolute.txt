@@ -1,0 +1,12 @@
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\bin\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.deps.json
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\bin\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\bin\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.pdb
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.AssemblyInfoInputs.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.AssemblyInfo.cs
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.sourcelink.json
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\refint\SmartExpenseTracker.Infra.Mapping.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.pdb
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Mapping\obj\Debug\net9.0\ref\SmartExpenseTracker.Infra.Mapping.dll

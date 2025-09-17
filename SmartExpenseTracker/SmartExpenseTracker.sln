@@ -13,15 +13,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Core.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Core.ApplicationService", "1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj", "{F76A6947-003D-455F-BD6C-57335562790D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.IdGenerators", "2.Infrastructure\SmartExpenseTracker.Infrastructure.IdGenerators\SmartExpenseTracker.Infra.IdGenerators.csproj", "{8609C347-C961-4A99-AA67-74245CF3B704}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.IdGenerators", "2.Infra\SmartExpenseTracker.infra.IdGenerators\SmartExpenseTracker.Infra.IdGenerators.csproj", "{8609C347-C961-4A99-AA67-74245CF3B704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.SimpleDateTime", "2.Infrastructure\SmartExpenseTracker.Infrastructure.SimpleDateTime\SmartExpenseTracker.Infra.SimpleDateTime.csproj", "{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.SimpleDateTime", "2.Infra\SmartExpenseTracker.infra.SimpleDateTime\SmartExpenseTracker.Infra.SimpleDateTime.csproj", "{D9FA794B-9912-4E0B-BE01-9A0DE0C438C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.EndPoint.RestApi", "3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\SmartExpenseTracker.EndPoint.RestApi.csproj", "{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.ExternalServices", "2.Infrastructure\SmartExpenseTracker.Infrastructure.ExternalServices\SmartExpenseTracker.Infra.ExternalServices.csproj", "{549BE8F3-227F-43BF-89C4-B8586C603ED1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.ExternalServices", "2.Infra\SmartExpenseTracker.infra.ExternalServices\SmartExpenseTracker.Infra.ExternalServices.csproj", "{549BE8F3-227F-43BF-89C4-B8586C603ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.Resilience", "2.Infrastructure\SmartExpenseTracker.Infrastructure.Resilience\SmartExpenseTracker.Infra.Resilience.csproj", "{164F69C8-D428-40B0-9FAC-63D296015BFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.Resilience", "2.Infra\SmartExpenseTracker.infra.Resilience\SmartExpenseTracker.Infra.Resilience.csproj", "{164F69C8-D428-40B0-9FAC-63D296015BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.Mapping", "2.Infra\SmartExpenseTracker.Infra.Mapping\SmartExpenseTracker.Infra.Mapping.csproj", "{5C14D720-CA25-4033-9D85-850CB1896870}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{164F69C8-D428-40B0-9FAC-63D296015BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C14D720-CA25-4033-9D85-850CB1896870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C14D720-CA25-4033-9D85-850CB1896870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C14D720-CA25-4033-9D85-850CB1896870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C14D720-CA25-4033-9D85-850CB1896870}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{5A3002B8-0F97-4C5B-B2EC-7A77F988096E} = {53A57DA4-BBB1-45F7-B371-329E83E4A0CE}
 		{549BE8F3-227F-43BF-89C4-B8586C603ED1} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 		{164F69C8-D428-40B0-9FAC-63D296015BFF} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
+		{5C14D720-CA25-4033-9D85-850CB1896870} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B00F177A-5826-43F5-9787-CF0E6E60F631}
