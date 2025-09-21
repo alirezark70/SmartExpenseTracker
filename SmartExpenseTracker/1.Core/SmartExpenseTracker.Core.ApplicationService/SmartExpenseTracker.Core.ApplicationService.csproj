@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.Infra.Mapping\SmartExpenseTracker.Infra.Mapping.csproj" />
     <ProjectReference Include="..\SmartExpenseTracker.Core.Domain\SmartExpenseTracker.Core.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -403,6 +403,7 @@
           "Mapster.DependencyInjection": "1.0.1",
           "MediatR": "13.0.0",
           "SmartExpenseTracker.Core.Domain": "1.0.0",
+          "SmartExpenseTracker.Infra.Mapping": "1.0.0",
           "System.Runtime.Extensions": "4.3.1"
         },
         "compile": {
@@ -423,6 +424,21 @@
         },
         "runtime": {
           "bin/placeholder/SmartExpenseTracker.Core.Domain.dll": {}
+        }
+      },
+      "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+          "Mapster": "7.4.0",
+          "Mapster.DependencyInjection": "1.0.1"
+        },
+        "compile": {
+          "bin/placeholder/SmartExpenseTracker.Infra.Mapping.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartExpenseTracker.Infra.Mapping.dll": {}
         }
       }
     }
@@ -1173,6 +1189,11 @@
       "type": "project",
       "path": "../../1.Core/SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj",
       "msbuildProject": "../../1.Core/SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj"
+    },
+    "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+      "type": "project",
+      "path": "../SmartExpenseTracker.Infra.Mapping/SmartExpenseTracker.Infra.Mapping.csproj",
+      "msbuildProject": "../SmartExpenseTracker.Infra.Mapping/SmartExpenseTracker.Infra.Mapping.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1187,11 +1208,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj",
+      "projectUniqueName": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj",
       "projectName": "SmartExpenseTracker.Infra.ExternalServices",
-      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj",
+      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj",
       "packagesPath": "C:\\Users\\email\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\obj\\",
+      "outputPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.ExternalServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

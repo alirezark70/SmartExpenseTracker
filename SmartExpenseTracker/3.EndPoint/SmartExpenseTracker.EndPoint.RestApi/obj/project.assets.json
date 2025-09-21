@@ -939,6 +939,7 @@
           "Mapster.DependencyInjection": "1.0.1",
           "MediatR": "13.0.0",
           "SmartExpenseTracker.Core.Domain": "1.0.0",
+          "SmartExpenseTracker.Infra.Mapping": "1.0.0",
           "System.Runtime.Extensions": "4.3.1"
         },
         "compile": {
@@ -959,6 +960,21 @@
         },
         "runtime": {
           "bin/placeholder/SmartExpenseTracker.Core.Domain.dll": {}
+        }
+      },
+      "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+          "Mapster": "7.4.0",
+          "Mapster.DependencyInjection": "1.0.1"
+        },
+        "compile": {
+          "bin/placeholder/SmartExpenseTracker.Infra.Mapping.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SmartExpenseTracker.Infra.Mapping.dll": {}
         }
       }
     }
@@ -2658,6 +2674,11 @@
       "type": "project",
       "path": "../../1.Core/SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj",
       "msbuildProject": "../../1.Core/SmartExpenseTracker.Core.Domain/SmartExpenseTracker.Core.Domain.csproj"
+    },
+    "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+      "type": "project",
+      "path": "../../2.Infra/SmartExpenseTracker.Infra.Mapping/SmartExpenseTracker.Infra.Mapping.csproj",
+      "msbuildProject": "../../2.Infra/SmartExpenseTracker.Infra.Mapping/SmartExpenseTracker.Infra.Mapping.csproj"
     }
   },
   "projectFileDependencyGroups": {
