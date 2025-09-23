@@ -27,5 +27,8 @@
     <ProjectReference Include="..\..\1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj" />
     <ProjectReference Include="..\..\1.Core\SmartExpenseTracker.Core.Domain\SmartExpenseTracker.Core.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
 
 </Project>
