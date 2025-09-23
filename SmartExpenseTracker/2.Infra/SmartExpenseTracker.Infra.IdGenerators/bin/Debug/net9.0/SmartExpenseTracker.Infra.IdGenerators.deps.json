@@ -287,6 +287,7 @@
           "Mapster.DependencyInjection": "1.0.1",
           "MediatR": "13.0.0",
           "SmartExpenseTracker.Core.Domain": "1.0.0",
+          "SmartExpenseTracker.Infra.Mapping": "1.0.0",
           "System.Runtime.Extensions": "4.3.1"
         },
         "runtime": {
@@ -302,6 +303,19 @@
         },
         "runtime": {
           "SmartExpenseTracker.Core.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SmartExpenseTracker.Infra.Mapping/1.0.0": {
+        "dependencies": {
+          "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+          "Mapster": "7.4.0",
+          "Mapster.DependencyInjection": "1.0.1"
+        },
+        "runtime": {
+          "SmartExpenseTracker.Infra.Mapping.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -517,6 +531,11 @@
       "sha512": ""
     },
     "SmartExpenseTracker.Core.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SmartExpenseTracker.Infra.Mapping/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
