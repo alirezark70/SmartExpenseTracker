@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.Infra.ExternalServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0604fa37686757767d7d4bb51d969fba31fbee0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f95cdfb86642faf336c05e8f98d9aa1126c71f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.Infra.ExternalServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.Infra.ExternalServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

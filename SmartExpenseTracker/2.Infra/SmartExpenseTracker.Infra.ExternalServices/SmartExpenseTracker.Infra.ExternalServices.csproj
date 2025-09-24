@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj" />
+    <ProjectReference Include="..\SmartExpenseTracker.infra.Resilience\SmartExpenseTracker.Infra.Resilience.csproj" />
   </ItemGroup>
 
 </Project>
