@@ -30,11 +30,6 @@ namespace SmartExpenseTracker.Resilience.Extenstions.DependencyInjection
             services.AddSingleton<IPolicyRegistry, PolicyRegistry>();
 
 
-            
-
-
-           
-
             services.AddSingleton<IResilienceTelemetry, ResilienceTelemetry>();
 
             services.AddHttpContextAccessor();
