@@ -6,6 +6,7 @@ using Polly;
 using Polly.CircuitBreaker;
 using Polly.Retry;
 using Polly.Timeout;
+using SmartExpenseTracker.Infra.Resilience;
 using SmartExpenseTracker.Infra.Resilience.Configuration;
 using SmartExpenseTracker.Infra.Resilience.Contracts;
 using SmartExpenseTracker.Infra.Resilience.Enums;
@@ -15,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Infra.Resilience.Extenstions.DependencyInjection
+namespace SmartExpenseTracker.Resilience.Extenstions.DependencyInjection
 {
     public static class ResilienceServiceRegistrer
     {
@@ -29,30 +30,10 @@ namespace SmartExpenseTracker.Infra.Resilience.Extenstions.DependencyInjection
             services.AddSingleton<IPolicyRegistry, PolicyRegistry>();
 
 
-            //must be move to external service
-            //services.AddScoped<IPostInquiryService>(provider =>
-            //{
-            //    var innerService = new PostInquiryService(
-            //        provider.GetRequiredService<HttpClient>(),
-            //        provider.GetRequiredService<IMappingService>(),
-            //        provider.GetRequiredService<ILogger<PostInquiryService>>());
-
-            //    return new ResilientPostInquiryService(
-            //        provider.GetRequiredService<ILogger<ResilientPostInquiryService>>(),
-            //        provider.GetRequiredService<IPolicyRegistry>(),
-            //        innerService,
-            //        provider.GetRequiredService<IResilienceTelemetry>());
-            //});
+            
 
 
-            // Register HTTP Clients with Resilience
-            //services.AddHttpClient<IPostInquiryService, PostInquiryService>(client =>
-            //{
-            //    client.BaseAddress = new Uri(configuration["ExternalServices:PersonApi:BaseUrl"]!);
-            //    client.DefaultRequestHeaders.Add("Accept", "application/json");
-            //    client.Timeout = TimeSpan.FromSeconds(30);
-            //})
-            //.InjectStandardResilienceHandler();
+           
 
             services.AddSingleton<IResilienceTelemetry, ResilienceTelemetry>();
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.ExternalServices.Posts;
 using SmartExpenseTracker.Core.ApplicationService.Dtos.Posts;
+using SmartExpenseTracker.Infra.Mapping.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,15 @@ namespace SmartExpenseTracker.Infra.ExternalServices.Posts
     public class PostInquiryService : IPostInquiryService
     {
         private readonly HttpClient _httpClient;
-        //private readonly IMappingService _mapper;
+        private readonly IMappingService _mapper;
         private readonly ILogger<PostInquiryService> _logger;
 
-        public PostInquiryService(HttpClient httpClient, ILogger<PostInquiryService> logger)
+        public PostInquiryService(HttpClient httpClient, IMappingService mapper, ILogger<PostInquiryService> logger)
         {
             _httpClient = httpClient;
             _logger = logger;
             Id = Guid.NewGuid();
+            _mapper = mapper;
         }
 
         public Guid Id { get; init; }
