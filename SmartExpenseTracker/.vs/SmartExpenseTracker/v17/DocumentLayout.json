@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{549BE8F3-227F-43BF-89C4-B8586C603ED1}|2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.externalservices\\posts\\resilientpostinquiryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{549BE8F3-227F-43BF-89C4-B8586C603ED1}|2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.externalservices\\posts\\resilientpostinquiryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{549BE8F3-227F-43BF-89C4-B8586C603ED1}|2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.externalservices\\posts\\postinquiryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{549BE8F3-227F-43BF-89C4-B8586C603ED1}|2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.externalservices\\posts\\postinquiryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{164F69C8-D428-40B0-9FAC-63D296015BFF}|2.Infra\\SmartExpenseTracker.infra.Resilience\\SmartExpenseTracker.Infra.Resilience.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.resilience\\extenstions\\dependencyinjection\\resilienceserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{164F69C8-D428-40B0-9FAC-63D296015BFF}|2.Infra\\SmartExpenseTracker.infra.Resilience\\SmartExpenseTracker.Infra.Resilience.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.resilience\\extenstions\\dependencyinjection\\resilienceserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C14D720-CA25-4033-9D85-850CB1896870}|2.Infra\\SmartExpenseTracker.Infra.Mapping\\SmartExpenseTracker.Infra.Mapping.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.mapping\\exceptions\\dependencyinjection\\mappingserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C14D720-CA25-4033-9D85-850CB1896870}|2.Infra\\SmartExpenseTracker.Infra.Mapping\\SmartExpenseTracker.Infra.Mapping.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.mapping\\exceptions\\dependencyinjection\\mappingserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\mappingconfig\\testconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\mappingconfig\\testconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C14D720-CA25-4033-9D85-850CB1896870}|2.Infra\\SmartExpenseTracker.Infra.Mapping\\SmartExpenseTracker.Infra.Mapping.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.mapping\\contracts\\imappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C14D720-CA25-4033-9D85-850CB1896870}|2.Infra\\SmartExpenseTracker.Infra.Mapping\\SmartExpenseTracker.Infra.Mapping.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.mapping\\contracts\\imappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,83 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ResilientPostInquiryService.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\ResilientPostInquiryService.cs",
-              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\ResilientPostInquiryService.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\ResilientPostInquiryService.cs",
-              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\ResilientPostInquiryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T18:19:34.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ResilienceServiceRegistrer.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Resilience\\Extenstions\\DependencyInjection\\ResilienceServiceRegistrer.cs",
-              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Resilience\\Extenstions\\DependencyInjection\\ResilienceServiceRegistrer.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Resilience\\Extenstions\\DependencyInjection\\ResilienceServiceRegistrer.cs",
-              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.Resilience\\Extenstions\\DependencyInjection\\ResilienceServiceRegistrer.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T17:49:14.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TestConfig.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\MappingConfig\\TestConfig.cs",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\MappingConfig\\TestConfig.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\MappingConfig\\TestConfig.cs",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\MappingConfig\\TestConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T19:13:29.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MappingServiceRegistrer.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Mapping\\Exceptions\\DependencyInjection\\MappingServiceRegistrer.cs",
-              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Mapping\\Exceptions\\DependencyInjection\\MappingServiceRegistrer.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Mapping\\Exceptions\\DependencyInjection\\MappingServiceRegistrer.cs",
-              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.Mapping\\Exceptions\\DependencyInjection\\MappingServiceRegistrer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:55:48.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMappingConfig.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Mapping\\Contracts\\IMappingConfig.cs",
-              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Mapping\\Contracts\\IMappingConfig.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Mapping\\Contracts\\IMappingConfig.cs",
-              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.Mapping\\Contracts\\IMappingConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T18:54:05.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PostInquiryService.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
-              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
-              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T20:41:14.932Z",
-              "EditorCaption": ""
             }
           ]
         }
