@@ -10,9 +10,16 @@ namespace SmartExpenseTracker.Core.Domain.Contracts.Common
     public interface ICurrentUserService
     {
         string? UserId { get; }
-        string? Username { get; }
+
+        string? UserName { get; }
+
         bool IsAuthenticated { get; }
-        IEnumerable<RoleType> Roles { get; }
-        IEnumerable<PermissionType> Permissions { get; }
+
+        IReadOnlyList<string> Roles { get; }
+        IReadOnlyList<string> Permissions { get; }
+
+        bool IsInRole(string roleName);
+
+        bool HasPermission(string permissionName);
     }
 }

@@ -1,6 +1,11 @@
-﻿using Mapster;
+﻿using FluentValidation;
+using Mapster;
 using MapsterMapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using SmartExpenseTracker.Core.ApplicationService.Behaviors;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
+using SmartExpenseTracker.Core.ApplicationService.Services.Response;
 using SmartExpenseTracker.Infra.Mapping.Contracts;
 using SmartExpenseTracker.Infra.Mapping.Services;
 using System;

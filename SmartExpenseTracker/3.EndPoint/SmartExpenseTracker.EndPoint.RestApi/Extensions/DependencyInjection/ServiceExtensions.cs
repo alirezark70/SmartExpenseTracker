@@ -1,6 +1,7 @@
 ﻿using App.Metrics;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using SmartExpenseTracker.Core.ApplicationService.Behaviors;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using SmartExpenseTracker.Core.Domain.Enums.Response;
 using SmartExpenseTracker.EndPoint.RestApi.Filters;

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using internalValidationException = SmartExpenseTracker.Core.ApplicationService.Exceptions;
 namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
 {
     public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
