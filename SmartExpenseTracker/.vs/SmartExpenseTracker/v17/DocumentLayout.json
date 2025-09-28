@@ -22,8 +22,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,18 +40,10 @@
               "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
               "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
               "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Posts\\PostInquiryService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAABQAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T15:35:05.318Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -55,8 +55,7 @@
               "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Extenstions\\DependencyInjection\\ExternalServiceRegistrer.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T15:28:34.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-26T15:28:34.48Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.Resilience\\Extenstions\\DependencyInjection\\ResilienceServiceRegistrer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T15:25:41.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-26T15:25:41.14Z"
             }
           ]
         }
