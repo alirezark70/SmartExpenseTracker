@@ -32,8 +32,5 @@
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.infra.Resilience\SmartExpenseTracker.Infra.Resilience.csproj" />
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.infra.SimpleDateTime\SmartExpenseTracker.Infra.SimpleDateTime.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
 
 </Project>
