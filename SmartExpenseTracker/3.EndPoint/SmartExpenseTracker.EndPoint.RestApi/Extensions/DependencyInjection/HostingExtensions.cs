@@ -1,6 +1,9 @@
 ﻿using Microsoft.OpenApi.Models;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using Swashbuckle.AspNetCore.Filters;
+using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
+using SmartExpenseTracker.Core.Extensions.DependencyInjection;
+using SmartExpenseTracker.Extensions.DependencyInjection;
 
 namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 {
@@ -56,13 +59,27 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             //    options.UseSqlServer(connectionString);
             //});
 
-            //Add internal Services
-            builder.Services.RegisterSimpleDateTimeService();
+            
+
+            //Add Response Services
             builder.Services.RegisterResponseService();
 
+            //Add Id Generator Services
+            builder.Services.RegisterSnowflakeIdGeneratorService(1);
+
+            //Add Mapping Services
+            builder.Services.RegisterMappingService();
+
+            builder.Services.RegisterResilienceService(builder.Configuration);
 
             // add external service and resilince and telemetry and retry services
             builder.Services.RegisterExternalService(builder.Configuration);
+
+
+
+            //Add internal Services
+            builder.Services.RegisterSimpleDateTimeService();
+
 
             builder.Services.AddMetericsToDI();
 

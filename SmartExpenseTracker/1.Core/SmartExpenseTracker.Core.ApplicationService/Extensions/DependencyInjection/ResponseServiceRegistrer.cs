@@ -15,7 +15,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Core.ApplicationService.Extensions.DependencyInjection
+namespace SmartExpenseTracker.Core.Extensions.DependencyInjection
 {
     public static class ResponseServiceRegistrer
     {

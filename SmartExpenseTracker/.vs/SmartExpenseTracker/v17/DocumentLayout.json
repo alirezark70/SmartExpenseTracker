@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{549BE8F3-227F-43BF-89C4-B8586C603ED1}|2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.externalservices\\extensions\\dependencyinjection\\externalserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{549BE8F3-227F-43BF-89C4-B8586C603ED1}|2.Infra\\SmartExpenseTracker.infra.ExternalServices\\SmartExpenseTracker.Infra.ExternalServices.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.externalservices\\extensions\\dependencyinjection\\externalserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\3.endpoint\\smartexpensetracker.endpoint.restapi\\extensions\\dependencyinjection\\hostingextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|solutionrelative:3.endpoint\\smartexpensetracker.endpoint.restapi\\extensions\\dependencyinjection\\hostingextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8609C347-C961-4A99-AA67-74245CF3B704}|2.Infra\\SmartExpenseTracker.infra.IdGenerators\\SmartExpenseTracker.Infra.IdGenerators.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.idgenerators\\extensions\\dependencyinjection\\snowflakeidgeneratorregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8609C347-C961-4A99-AA67-74245CF3B704}|2.Infra\\SmartExpenseTracker.infra.IdGenerators\\SmartExpenseTracker.Infra.IdGenerators.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.idgenerators\\extensions\\dependencyinjection\\snowflakeidgeneratorregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\3.endpoint\\smartexpensetracker.endpoint.restapi\\extensions\\dependencyinjection\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|solutionrelative:3.endpoint\\smartexpensetracker.endpoint.restapi\\extensions\\dependencyinjection\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\extensions\\dependencyinjection\\responseserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\extensions\\dependencyinjection\\responseserviceregistrer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\3.endpoint\\smartexpensetracker.endpoint.restapi\\extensions\\dependencyinjection\\hostingextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|solutionrelative:3.endpoint\\smartexpensetracker.endpoint.restapi\\extensions\\dependencyinjection\\hostingextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,39 +42,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ExternalServiceRegistrer.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Extensions\\DependencyInjection\\ExternalServiceRegistrer.cs",
+              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Extensions\\DependencyInjection\\ExternalServiceRegistrer.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Extensions\\DependencyInjection\\ExternalServiceRegistrer.cs",
+              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.ExternalServices\\Extensions\\DependencyInjection\\ExternalServiceRegistrer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T18:34:57.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SnowflakeIdGeneratorRegistrer.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.IdGenerators\\Extensions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
+              "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.infra.IdGenerators\\Extensions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.IdGenerators\\Extensions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
+              "RelativeToolTip": "2.Infra\\SmartExpenseTracker.infra.IdGenerators\\Extensions\\DependencyInjection\\SnowflakeIdGeneratorRegistrer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T18:13:15.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ResponseServiceRegistrer.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Extensions\\DependencyInjection\\ResponseServiceRegistrer.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Extensions\\DependencyInjection\\ResponseServiceRegistrer.cs",
               "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Extensions\\DependencyInjection\\ResponseServiceRegistrer.cs",
               "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Extensions\\DependencyInjection\\ResponseServiceRegistrer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T19:18:03.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\ServiceExtensions.cs",
               "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\ServiceExtensions.cs",
               "RelativeToolTip": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\ServiceExtensions.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAABIAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T19:12:33.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HostingExtensions.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\HostingExtensions.cs",
               "RelativeDocumentMoniker": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\HostingExtensions.cs",
               "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\HostingExtensions.cs",
               "RelativeToolTip": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Extensions\\DependencyInjection\\HostingExtensions.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAFQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T19:11:48.246Z",
               "EditorCaption": ""
