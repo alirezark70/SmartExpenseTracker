@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.EndPoint.RestApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95bef39676f4ea5f766f86306f6e42842fb993ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf4c430c623c3fea280f2ca4f2ed8aef53c25758")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.EndPoint.RestApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.EndPoint.RestApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
