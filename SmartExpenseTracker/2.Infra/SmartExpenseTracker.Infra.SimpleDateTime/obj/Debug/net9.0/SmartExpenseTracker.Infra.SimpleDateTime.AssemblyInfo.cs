@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.Infra.SimpleDateTime")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9922b700413cd001961d960fe5ec7ca46e3df648")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60a98922463f3a12823e6ba0a19745e7937ceef8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.Infra.SimpleDateTime")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.Infra.SimpleDateTime")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
