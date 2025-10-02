@@ -2,12 +2,6 @@
 using SmartExpenseTracker.Core.Domain.Enums.Expense;
 using SmartExpenseTracker.Core.Domain.Events.Budget;
 using SmartExpenseTracker.Core.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
 {
