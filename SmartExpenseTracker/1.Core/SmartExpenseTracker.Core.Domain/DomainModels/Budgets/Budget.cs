@@ -87,12 +87,12 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             SetUpdateTime(CreatedAt);
         }
 
-        public void AddAlert(decimal thresholdPercentage)
+        public void AddAlert(decimal thresholdPercentage,Guid budgetAlertId,DateTime createdAt)
         {
             if (thresholdPercentage <= 0 || thresholdPercentage > 100)
                 throw new ArgumentException("Threshold percentage must be between 0 and 100");
 
-            var alert = new BudgetAlert(Id,CreatedAt, thresholdPercentage);
+            var alert = new BudgetAlert(Id, thresholdPercentage, budgetAlertId, createdAt);
 
             if (!_alerts.Any(a => a.ThresholdPercentage == thresholdPercentage))
             {

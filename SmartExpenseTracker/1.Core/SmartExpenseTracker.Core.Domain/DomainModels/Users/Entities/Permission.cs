@@ -2,8 +2,12 @@
 
 namespace SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities
 {
-    public sealed class Permission: BaseEntity
+    public sealed class Permission : BaseEntity
     {
+        public Permission(Guid id, DateTime createdAt) : base(id, createdAt)
+        {
+        }
+
         public string Name { get; set; } = string.Empty;
         public string Resource { get; set; } = string.Empty;
         public string Action { get; set; } = string.Empty;

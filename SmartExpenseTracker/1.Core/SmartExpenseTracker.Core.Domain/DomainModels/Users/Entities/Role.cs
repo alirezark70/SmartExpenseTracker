@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities
 {
-    public sealed class Role:BaseEntity
+    public sealed class Role : BaseEntity
     {
+        public Role(Guid id, DateTime createdAt) : base(id, createdAt)
+        {
+        }
+
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 

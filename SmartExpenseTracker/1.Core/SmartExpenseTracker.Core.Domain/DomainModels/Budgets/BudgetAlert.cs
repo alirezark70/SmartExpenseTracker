@@ -14,7 +14,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
         public bool IsTriggered { get; private set; }
         public DateTime? TriggeredAt { get; private set; }
 
-        public BudgetAlert(Guid budgetId, DateTime createdAt, decimal thresholdPercentage) :base(id,createdAt)
+        public BudgetAlert(Guid budgetId, decimal thresholdPercentage,Guid id, DateTime createdAt) :base(id,createdAt)
         {
             BudgetId = budgetId;
             ThresholdPercentage = thresholdPercentage;
