@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Core.Domain.DomainModels
+namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
 {
     public class Expense : BaseEntity
     {
