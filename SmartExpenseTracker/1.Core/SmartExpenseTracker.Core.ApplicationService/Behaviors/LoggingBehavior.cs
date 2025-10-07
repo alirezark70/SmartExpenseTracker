@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
 {
-    public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull
     {
         private readonly ILogger<TRequest> _logger;
         private readonly IPostInquiryService _postInquiryService;
 
-        public LoggingBehaviour(ILogger<TRequest> logger, IPostInquiryService postInquiryService)
+        public LoggingBehavior(ILogger<TRequest> logger, IPostInquiryService postInquiryService)
         {
             _logger = logger;
             _postInquiryService = postInquiryService;
