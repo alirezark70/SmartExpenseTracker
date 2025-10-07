@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UhR1xp0zBpM=",
+  "dgSpecHash": "uCLzdMR3kQw=",
   "success": true,
   "projectFilePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.IdGenerators\\SmartExpenseTracker.Infra.IdGenerators.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\email\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\email\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\email\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0\\fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "C:\\Users\\email\\.nuget\\packages\\idgen\\3.0.7\\idgen.3.0.7.nupkg.sha512",
@@ -33,5 +34,15 @@
     "C:\\Users\\email\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512",
     "C:\\Users\\email\\.nuget\\packages\\system.runtime.extensions\\4.3.1\\system.runtime.extensions.4.3.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: An error occurred while sending the request.",
+      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.IdGenerators\\SmartExpenseTracker.Infra.IdGenerators.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.IdGenerators\\SmartExpenseTracker.Infra.IdGenerators.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
