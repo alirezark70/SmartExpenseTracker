@@ -423,7 +423,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.7": {
+      "Microsoft.AspNetCore.OpenApi/9.0.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.6.17"
@@ -2300,10 +2300,10 @@
         "mediatr.contracts.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/9.0.7": {
-      "sha512": "8aG0mkgmA38IDJ0ca5HIpdexKjHXIh0z1kIdw5WyM6CrD4+CEt97UgSwBBBCHG6QQKV0hj2mfkwtEcqrJBcu8g==",
+    "Microsoft.AspNetCore.OpenApi/9.0.8": {
+      "sha512": "BwF9sQCKmvu93C/pmKxJjPhF5fFB23MEcgTsGL+7W3wKLYawS4lyFSL5/qh00IJzuADLf+1SmvxMaphbyZYqQQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/9.0.7",
+      "path": "microsoft.aspnetcore.openapi/9.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2312,7 +2312,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -4834,7 +4834,7 @@
       "App.Metrics.AspNetCore.Tracking >= 4.3.0",
       "App.Metrics.Extensions.DependencyInjection >= 4.3.0",
       "App.Metrics.Extensions.Hosting >= 4.3.0",
-      "Microsoft.AspNetCore.OpenApi >= 9.0.7",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.8",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.22.1",
       "SmartExpenseTracker.Core.ApplicationService >= 1.0.0",
       "SmartExpenseTracker.Core.Domain >= 1.0.0",
@@ -4945,7 +4945,7 @@
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[9.0.7, )"
+            "version": "[9.0.8, )"
           },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",

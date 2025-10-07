@@ -51,14 +51,14 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             _isActive = true;
         }
 
-        public void AddExpense(Money amount)
+        public void AddExpense(Money amount, Guid budgetThresholdReachedEventId, DateTime occurredOn)
         {
             if (amount.Currency != _limit.Currency)
                 throw new InvalidOperationException($"Currency mismatch. Expected {_limit.Currency}, got {amount.Currency}");
 
             _spent = new Money(_spent.Value + amount.Value, _spent.Currency);
 
-            CheckBudgetAlerts();
+            CheckBudgetAlerts(budgetThresholdReachedEventId, occurredOn);
             SetUpdateTime(CreatedAt);
         }
 
@@ -68,10 +68,10 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             SetUpdateTime(CreatedAt);
         }
 
-        public void UpdateLimit(Money newLimit)
+        public void UpdateLimit(Money newLimit, Guid budgetThresholdReachedEventId, DateTime occurredOn)
         {
             SetLimit(newLimit);
-            CheckBudgetAlerts();
+            CheckBudgetAlerts(budgetThresholdReachedEventId, occurredOn);
             SetUpdateTime(CreatedAt);
         }
 
@@ -101,14 +101,14 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             }
         }
 
-        private void CheckBudgetAlerts()
+        private void CheckBudgetAlerts(Guid budgetThresholdReachedEventId, DateTime occurredOn)
         {
             foreach (var alert in _alerts.Where(a => !a.IsTriggered))
             {
                 if (UsagePercentage >= alert.ThresholdPercentage)
                 {
                     alert.Trigger();
-                    AddDomainEvent(new BudgetThresholdReachedEvent(Id, UsagePercentage, alert.ThresholdPercentage));
+                    AddDomainEvent(new BudgetThresholdReachedEvent(budgetThresholdReachedEventId, occurredOn, Id, UsagePercentage, alert.ThresholdPercentage));
                 }
             }
         }

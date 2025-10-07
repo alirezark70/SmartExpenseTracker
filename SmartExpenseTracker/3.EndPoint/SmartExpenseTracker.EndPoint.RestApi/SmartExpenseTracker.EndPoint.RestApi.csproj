@@ -15,7 +15,6 @@
     <PackageReference Include="App.Metrics.AspNetCore.Tracking" Version="4.3.0" />
     <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.3.0" />
     <PackageReference Include="App.Metrics.Extensions.Hosting" Version="4.3.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="9.0.0" />
   </ItemGroup>

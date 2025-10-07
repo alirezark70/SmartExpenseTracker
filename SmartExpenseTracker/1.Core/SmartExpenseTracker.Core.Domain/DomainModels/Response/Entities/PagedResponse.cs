@@ -16,7 +16,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities
         public bool HasNext { get; set; }
         public bool HasPrevious { get; set; }
 
-        public PagedResponse(IEnumerable<T> data, int pageNumber, int pageSize, int totalRecords)
+        public PagedResponse(IEnumerable<T> data, int pageNumber, int pageSize, int totalRecords) 
         {
             Data = data;
             PageNumber = pageNumber;

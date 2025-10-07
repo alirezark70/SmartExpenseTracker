@@ -19,6 +19,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             BudgetId = budgetId;
             ThresholdPercentage = thresholdPercentage;
             IsTriggered = false;
+            TriggeredAt = createdAt;
         }
 
         public void Trigger()

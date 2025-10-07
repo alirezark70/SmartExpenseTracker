@@ -15,10 +15,10 @@ namespace SmartExpenseTracker.Core.Domain.Events.Budget
         public decimal CurrentUsagePercentage { get; }
         public decimal ThresholdPercentage { get; }
 
-        public BudgetThresholdReachedEvent(Guid budgetId, decimal currentUsagePercentage, decimal thresholdPercentage)
+        public BudgetThresholdReachedEvent(Guid id,DateTime occurredOn, Guid budgetId, decimal currentUsagePercentage, decimal thresholdPercentage)
         {
-            Id = Guid.NewGuid();
-            OccurredOn = DateTime.UtcNow;
+            Id = id;
+            OccurredOn = occurredOn;
             BudgetId = budgetId;
             CurrentUsagePercentage = currentUsagePercentage;
             ThresholdPercentage = thresholdPercentage;

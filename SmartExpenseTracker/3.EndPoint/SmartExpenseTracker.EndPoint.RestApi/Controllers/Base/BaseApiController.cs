@@ -12,6 +12,7 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers.Base
     [ApiResponseActionFilter]
     public class BaseApiController : ControllerBase
     {
+
         protected IActionResult OkResponse<T>(T data, string message = "عملیات با موفقیت انجام شد")
         {
             return Ok(ApiResponse<T>.Success(data, message));

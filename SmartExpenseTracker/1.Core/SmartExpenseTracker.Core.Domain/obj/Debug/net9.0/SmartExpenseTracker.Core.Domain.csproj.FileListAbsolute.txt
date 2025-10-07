@@ -1,12 +1,12 @@
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.deps.json
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.csproj.AssemblyReference.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.AssemblyInfoInputs.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.AssemblyInfo.cs
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.csproj.CoreCompileInputs.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.sourcelink.json
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.deps.json
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.dll
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\refint\SmartExpenseTracker.Core.Domain.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\1.Core\SmartExpenseTracker.Core.Domain\obj\Debug\net9.0\SmartExpenseTracker.Core.Domain.pdb

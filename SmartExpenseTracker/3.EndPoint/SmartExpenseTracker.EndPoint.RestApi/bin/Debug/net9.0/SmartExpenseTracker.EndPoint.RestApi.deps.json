@@ -14,7 +14,7 @@
           "App.Metrics.AspNetCore.Tracking": "4.3.0",
           "App.Metrics.Extensions.DependencyInjection": "4.3.0",
           "App.Metrics.Extensions.Hosting": "4.3.0",
-          "Microsoft.AspNetCore.OpenApi": "9.0.7",
+          "Microsoft.AspNetCore.OpenApi": "9.0.8",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
           "SmartExpenseTracker.Core.ApplicationService": "1.0.0",
           "SmartExpenseTracker.Core.Domain": "1.0.0",
@@ -320,14 +320,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.7": {
+      "Microsoft.AspNetCore.OpenApi/9.0.8": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.23"
         },
         "runtime": {
           "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "9.0.7.0",
-            "fileVersion": "9.0.725.31702"
+            "assemblyVersion": "9.0.8.0",
+            "fileVersion": "9.0.825.36808"
           }
         }
       },
@@ -1364,12 +1364,12 @@
       "path": "mediatr.contracts/2.0.1",
       "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.OpenApi/9.0.7": {
+    "Microsoft.AspNetCore.OpenApi/9.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8aG0mkgmA38IDJ0ca5HIpdexKjHXIh0z1kIdw5WyM6CrD4+CEt97UgSwBBBCHG6QQKV0hj2mfkwtEcqrJBcu8g==",
-      "path": "microsoft.aspnetcore.openapi/9.0.7",
-      "hashPath": "microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512"
+      "sha512": "sha512-BwF9sQCKmvu93C/pmKxJjPhF5fFB23MEcgTsGL+7W3wKLYawS4lyFSL5/qh00IJzuADLf+1SmvxMaphbyZYqQQ==",
+      "path": "microsoft.aspnetcore.openapi/9.0.8",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
       "type": "package",

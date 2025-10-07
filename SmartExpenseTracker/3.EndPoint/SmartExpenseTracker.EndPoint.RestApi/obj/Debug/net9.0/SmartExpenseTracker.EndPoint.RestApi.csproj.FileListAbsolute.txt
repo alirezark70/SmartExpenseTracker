@@ -1,11 +1,3 @@
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.csproj.AssemblyReference.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.AssemblyInfoInputs.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.AssemblyInfo.cs
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.csproj.CoreCompileInputs.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.sourcelink.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\appsettings.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.staticwebassets.endpoints.json
@@ -120,7 +112,15 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\SmartExpenseTracker.Infra.Resilience.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\SmartExpenseTracker.Infra.SimpleDateTime.pdb
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.csproj.AssemblyReference.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.AssemblyInfoInputs.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.AssemblyInfo.cs
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.csproj.CoreCompileInputs.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.sourcelink.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

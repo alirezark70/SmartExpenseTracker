@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\users\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\users\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\3.endpoint\\smartexpensetracker.endpoint.restapi\\filters\\apiresponseactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|solutionrelative:3.endpoint\\smartexpensetracker.endpoint.restapi\\filters\\apiresponseactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\budgets\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\budgets\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\response\\entities\\pagedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\response\\entities\\pagedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\services\\response\\responseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\services\\response\\responseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\response\\entities\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\response\\entities\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\3.endpoint\\smartexpensetracker.endpoint.restapi\\controllers\\base\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3002B8-0F97-4C5B-B2EC-7A77F988096E}|3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\SmartExpenseTracker.EndPoint.RestApi.csproj|solutionrelative:3.endpoint\\smartexpensetracker.endpoint.restapi\\controllers\\base\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\budgets\\budgetalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\budgets\\budgetalert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\expenses\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\expenses\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\domainmodels\\budgets\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\domainmodels\\budgets\\budget.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.domain\\events\\budget\\budgetthresholdreachedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984EDA7F-0763-4A53-927C-1D42D49801E3}|1.Core\\SmartExpenseTracker.Core.Domain\\SmartExpenseTracker.Core.Domain.csproj|solutionrelative:1.core\\smartexpensetracker.core.domain\\events\\budget\\budgetthresholdreachedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +42,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -37,55 +57,111 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PagedResponse.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\PagedResponse.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\PagedResponse.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\PagedResponse.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\PagedResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T21:52:56.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseApiController.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Controllers\\Base\\BaseApiController.cs",
+              "RelativeDocumentMoniker": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Controllers\\Base\\BaseApiController.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Controllers\\Base\\BaseApiController.cs",
+              "RelativeToolTip": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Controllers\\Base\\BaseApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T21:46:02.99Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Users\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Users\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Users\\Entities\\User.cs",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Users\\Entities\\User.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAuwDkAAAAJAAAAAAAAAA==",
+              "Title": "ApiResponseActionFilter.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\ApiResponseActionFilter.cs",
+              "RelativeDocumentMoniker": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\ApiResponseActionFilter.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\ApiResponseActionFilter.cs",
+              "RelativeToolTip": "3.EndPoint\\SmartExpenseTracker.EndPoint.RestApi\\Filters\\ApiResponseActionFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T19:59:38.194Z",
+              "WhenOpened": "2025-10-07T21:43:30.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BudgetAlert.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
+              "Title": "ResponseService.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Services\\Response\\ResponseService.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Services\\Response\\ResponseService.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\Services\\Response\\ResponseService.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\Services\\Response\\ResponseService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAawB4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T17:26:25.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Budget.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAHgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T17:22:31.523Z",
+              "WhenOpened": "2025-10-07T21:41:07.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Expense.cs",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Expenses\\Expense.cs",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Expenses\\Expense.cs",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Expenses\\Expense.cs",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Expenses\\Expense.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\ApiResponse.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Response\\Entities\\ApiResponse.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAB8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T17:21:00.979Z",
+              "WhenOpened": "2025-10-07T21:25:07.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BudgetAlert.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\BudgetAlert.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T21:05:33.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Budget.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAAABwAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T21:04:10.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BudgetThresholdReachedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\Events\\Budget\\BudgetThresholdReachedEvent.cs",
+              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\Events\\Budget\\BudgetThresholdReachedEvent.cs",
+              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\Events\\Budget\\BudgetThresholdReachedEvent.cs",
+              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.Domain\\Events\\Budget\\BudgetThresholdReachedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T20:46:52.447Z",
               "EditorCaption": ""
             }
           ]

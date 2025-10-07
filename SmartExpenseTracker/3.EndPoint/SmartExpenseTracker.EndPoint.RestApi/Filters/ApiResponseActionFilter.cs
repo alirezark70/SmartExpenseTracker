@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 
 namespace SmartExpenseTracker.EndPoint.RestApi.Filters
 {
     public class ApiResponseActionFilter : ActionFilterAttribute
     {
+        
+
+
         public override void OnActionExecuted(ActionExecutedContext context)
         {
             if (context.Result is ObjectResult objectResult && objectResult.Value != null)
