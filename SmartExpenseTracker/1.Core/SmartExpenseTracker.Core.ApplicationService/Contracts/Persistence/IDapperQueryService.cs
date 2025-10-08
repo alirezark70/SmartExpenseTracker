@@ -40,5 +40,4 @@ namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence
             object? parameters = null,
             CancellationToken cancellationToken = default);
     }
-
 }

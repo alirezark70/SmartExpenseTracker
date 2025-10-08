@@ -2,8 +2,8 @@
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using Swashbuckle.AspNetCore.Filters;
 using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
-using SmartExpenseTracker.Core.Extensions.DependencyInjection;
 using SmartExpenseTracker.Extensions.DependencyInjection;
+using SmartExpenseTracker.Core.Extensions.DependencyInjection;
 
 namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 {

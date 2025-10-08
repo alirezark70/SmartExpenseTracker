@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.Mapping", "2.Infra\SmartExpenseTracker.Infra.Mapping\SmartExpenseTracker.Infra.Mapping.csproj", "{5C14D720-CA25-4033-9D85-850CB1896870}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartExpenseTracker.Infra.Persistence", "2.Infra\SmartExpenseTracker.Infra.Persistence\SmartExpenseTracker.Infra.Persistence.csproj", "{6F5C3975-5B17-4321-A097-68685E4CC0D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5C14D720-CA25-4033-9D85-850CB1896870}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C14D720-CA25-4033-9D85-850CB1896870}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C14D720-CA25-4033-9D85-850CB1896870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5C3975-5B17-4321-A097-68685E4CC0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5C3975-5B17-4321-A097-68685E4CC0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5C3975-5B17-4321-A097-68685E4CC0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5C3975-5B17-4321-A097-68685E4CC0D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{549BE8F3-227F-43BF-89C4-B8586C603ED1} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 		{164F69C8-D428-40B0-9FAC-63D296015BFF} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 		{5C14D720-CA25-4033-9D85-850CB1896870} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
+		{6F5C3975-5B17-4321-A097-68685E4CC0D3} = {A0E421D1-F13C-4FBD-B057-AB59A2BAFBDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B00F177A-5826-43F5-9787-CF0E6E60F631}
