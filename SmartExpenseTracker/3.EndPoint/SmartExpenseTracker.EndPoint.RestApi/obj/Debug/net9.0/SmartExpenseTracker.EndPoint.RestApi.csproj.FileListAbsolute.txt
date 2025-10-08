@@ -33,6 +33,8 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Mapster.DependencyInjection.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\MediatR.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
@@ -56,6 +58,8 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Http.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Http.Diagnostics.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Http.Resilience.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Logging.Configuration.dll
@@ -137,7 +141,3 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.genruntimeconfig.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\ref\SmartExpenseTracker.EndPoint.RestApi.dll
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

@@ -9,7 +9,8 @@ namespace SmartExpenseTracker.Core.Domain.Enums.Users
     public enum RoleType
     {
         None,
-        Admin
+        Admin,
+        User
 
     }
 }

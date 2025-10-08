@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.Infra.Resilience")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04dc36ac3ba3890d23437d0a2f027cdfbf9f2949")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68a203589c969fe0f351f7ad9362a073058c793a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.Infra.Resilience")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.Infra.Resilience")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
