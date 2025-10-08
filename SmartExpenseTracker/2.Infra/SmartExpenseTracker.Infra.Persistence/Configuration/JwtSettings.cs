@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Infra.Persistence.Configuration
 {
-    public class JwtSettings
+    public class JwtSettings : IJwtSettings
     {
         public const string SectionName = "JwtSettings";
 
