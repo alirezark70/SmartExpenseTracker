@@ -28,18 +28,21 @@ namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
             if (request is IQuery<TResponse>)
                 return await next();
 
-            using var transaction = await _unitOfWork.BeginTransactionAsync();
+            if (_unitOfWork.HasActiveTransaction)
+                return await next();
+
+
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
 
             try
             {
                 var response = await next();
-                await _unitOfWork.CommitAsync(cancellationToken);
-                await transaction.CommitAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
                 return response;
             }
             catch
             {
-                await transaction.RollbackAsync(cancellationToken);
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
                 throw;
             }
         }
