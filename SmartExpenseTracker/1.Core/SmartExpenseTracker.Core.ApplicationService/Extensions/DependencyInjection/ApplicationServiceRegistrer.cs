@@ -17,9 +17,9 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.Extensions.DependencyInjection
 {
-    public static class ResponseServiceRegistrer
+    public static class ApplicationServiceRegistrer
     {
-        public static IServiceCollection RegisterResponseService(this IServiceCollection services)
+        public static IServiceCollection RegisterApplicationService(this IServiceCollection services)
         {
             services.AddTransient<IResponseService, ResponseService>();
 
@@ -28,11 +28,9 @@ namespace SmartExpenseTracker.Core.Extensions.DependencyInjection
             var typeAdapterConfig = TypeAdapterConfig.GlobalSettings;
             typeAdapterConfig.Scan(Assembly.GetAssembly(typeof(IMappingConfig))!);
             typeAdapterConfig.Default.PreserveReference(true);
-
-            // Add Mapster
             services.AddSingleton(typeAdapterConfig);
-            services.AddScoped<IMapper, ServiceMapper>();
-            services.AddScoped<IMappingService, MappingService>();
+            //services.AddScoped<IMapper, ServiceMapper>();
+            //services.AddScoped<IMappingService, MappingService>();
 
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());

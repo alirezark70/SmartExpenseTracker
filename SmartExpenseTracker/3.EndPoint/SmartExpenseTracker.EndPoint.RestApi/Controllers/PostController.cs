@@ -33,9 +33,9 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
         {
             var posts = await _postInquiryService.GetAllAsync();
 
-            var dto = _mappingService.Map<PostDto>(posts);
+            var dto = _mappingService.Map<IEnumerable<PostViewModel>>(posts);
 
-            return PagedResponse<PostDto>(posts, 1, 1, posts.Count());
+            return PagedResponse<PostViewModel>(dto, 1, 1, dto.Count());
         }
 
         [HttpGet("GetAllTest")]

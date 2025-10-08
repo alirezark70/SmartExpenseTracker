@@ -59,26 +59,22 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             //    options.UseSqlServer(connectionString);
             //});
 
-            
-
-            //Add Response Services
-            builder.Services.RegisterResponseService();
+            builder.Services.RegisterResilienceService(builder.Configuration);
 
             //Add Id Generator Services
             builder.Services.RegisterSnowflakeIdGeneratorService(1);
 
+            //Add internal Services
+            builder.Services.RegisterSimpleDateTimeService();
+
             //Add Mapping Services
             builder.Services.RegisterMappingService();
-
-            builder.Services.RegisterResilienceService(builder.Configuration);
 
             // add external service and resilince and telemetry and retry services
             builder.Services.RegisterExternalService(builder.Configuration);
 
-
-
-            //Add internal Services
-            builder.Services.RegisterSimpleDateTimeService();
+            //Add application Services
+            builder.Services.RegisterApplicationService();
 
 
             builder.Services.AddMetericsToDI();

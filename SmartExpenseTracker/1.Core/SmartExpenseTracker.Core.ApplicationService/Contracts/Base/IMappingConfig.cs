@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartExpenseTracker.Infra.Mapping.Contracts
+namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Base
 {
     public interface IMappingConfig : IRegister
     {

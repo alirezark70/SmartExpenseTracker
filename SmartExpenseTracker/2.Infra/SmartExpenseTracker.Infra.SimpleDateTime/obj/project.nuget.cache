@@ -32,15 +32,5 @@
     "C:\\Users\\email\\.nuget\\packages\\system.runtime\\4.3.1\\system.runtime.4.3.1.nupkg.sha512",
     "C:\\Users\\email\\.nuget\\packages\\system.runtime.extensions\\4.3.1\\system.runtime.extensions.4.3.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: An error occurred while sending the request.",
-      "projectPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.SimpleDateTime\\SmartExpenseTracker.Infra.SimpleDateTime.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.infra.SimpleDateTime\\SmartExpenseTracker.Infra.SimpleDateTime.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

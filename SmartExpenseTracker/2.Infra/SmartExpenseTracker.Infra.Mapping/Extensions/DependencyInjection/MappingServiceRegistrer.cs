@@ -17,12 +17,12 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
         public static IServiceCollection RegisterMappingService(this IServiceCollection services)
         {
             // Mapster Configuration
-            var typeAdapterConfig = TypeAdapterConfig.GlobalSettings;
-            typeAdapterConfig.Scan(Assembly.GetAssembly(typeof(IMappingConfig))!);
-            typeAdapterConfig.Default.PreserveReference(true);
+            //var typeAdapterConfig = TypeAdapterConfig.GlobalSettings;
+            //typeAdapterConfig.Scan(Assembly.GetAssembly(typeof(IMappingConfig))!);
+            //typeAdapterConfig.Default.PreserveReference(true);
+            //services.AddSingleton(typeAdapterConfig);
 
             // Add Mapster
-            services.AddSingleton(typeAdapterConfig);
             services.AddScoped<IMapper, ServiceMapper>();
             services.AddScoped<IMappingService, MappingService>();
 
