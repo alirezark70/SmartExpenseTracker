@@ -5,14 +5,9 @@ using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
 using SmartExpenseTracker.Core.Domain.Enums.Users;
 using SmartExpenseTracker.Infra.Persistence.Configuration;
-using System;
-using System.Collections.Generic;
-
-using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Infra.Persistence.Services.Identity
 {

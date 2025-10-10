@@ -1,9 +1,9 @@
 ﻿using Microsoft.OpenApi.Models;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
-using Swashbuckle.AspNetCore.Filters;
-using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
-using SmartExpenseTracker.Extensions.DependencyInjection;
 using SmartExpenseTracker.Core.Extensions.DependencyInjection;
+using SmartExpenseTracker.Extensions.DependencyInjection;
+using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 {
@@ -19,10 +19,33 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "My API",
-                    Version = "v1"
+                    Title = "Smart Expense Tracker API",
+                    Version = "v1",
+                    Description = "API برای مدیریت هزینه‌ها"
                 });
-
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "توکن JWT را به این صورت وارد کنید: Bearer {your token}"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                 {
+                    {
+                      new OpenApiSecurityScheme
+                         {
+                           Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
                 // Add response headers
                 c.OperationFilter<AddResponseHeadersFilter>();
 
@@ -88,9 +111,12 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             {
                 app.MapOpenApi();
             }
-            app.UseSwagger();
-            app.UseSwaggerUI();
-
+            
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseAuthentication();
@@ -99,8 +125,6 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             app.MapControllers();
 
             app.UseHttpsRedirection();
-
-            app.UseAuthorization();
 
             app.MapControllers();
 

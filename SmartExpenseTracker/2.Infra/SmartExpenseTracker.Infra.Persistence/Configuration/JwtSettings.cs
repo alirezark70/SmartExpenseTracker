@@ -16,5 +16,6 @@ namespace SmartExpenseTracker.Infra.Persistence.Configuration
         public string Audience { get; set; } = string.Empty;
         public int AccessTokenExpirationMinutes { get; set; } = 20;
         public int RefreshTokenExpirationDays { get; set; } = 7;
+
     }
 }
