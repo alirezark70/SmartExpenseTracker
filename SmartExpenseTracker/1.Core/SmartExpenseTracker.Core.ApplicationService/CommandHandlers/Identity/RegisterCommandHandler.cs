@@ -69,7 +69,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             if (!createResult.Succeeded)
             {
                 var errors = string.Join(", ", createResult.Errors.Select(e => e.Description));
-                return ApiResponse<AuthResponseDto>.Failure($"خطا در ثبت‌نام: {errors}");
+                return ApiResponse<AuthResponseDto>.Failure($"خطا در ثبت ‌نام: {errors}");
             }
 
             // اختصاص نقش پیش‌فرض

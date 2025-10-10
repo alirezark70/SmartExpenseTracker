@@ -28,6 +28,16 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities
                 Message = "بدون محتوا"
             };
         }
+
+        public static ApiResponse Failure(string message, ResponseStatus statusCode)
+        {
+            return new ApiResponse
+            {
+                IsSuccess = false,
+                StatusCode = statusCode,
+                Message = message,
+            };
+        }
     }
     public class ApiResponse<T> : BaseResponse
     {
