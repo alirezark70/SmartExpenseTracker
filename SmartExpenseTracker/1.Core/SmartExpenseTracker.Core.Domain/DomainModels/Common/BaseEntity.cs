@@ -25,6 +25,15 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Common
             CreatedAt = createdAt;
         }
 
+
+        //برای اینکه در 
+        //ef core
+        //نیاز به سازنده بدون پارامتر پیش فرض داره 
+        protected BaseEntity()
+        {
+            _domainEvents = new List<IDomainEvent>();
+        }
+
         public void AddDomainEvent(IDomainEvent domainEvent)
         {
             _domainEvents.Add(domainEvent);

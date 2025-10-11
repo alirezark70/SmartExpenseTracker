@@ -12,22 +12,39 @@ namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence
 {
     public interface IRepository<TEntity> where TEntity : BaseEntity
     {
-        // Query (محدود - فقط برای نیازهای داخلی command)
+        // Query Methods with Specification Pattern
         Task<TEntity?> GetByIdAsync(
             object id,
+            CancellationToken cancellationToken = default,
+            params Expression<Func<TEntity, object>>[] includes);
+
+        Task<TEntity?> GetBySpecAsync(
+            ISpecification<TEntity> specification,
             CancellationToken cancellationToken = default);
 
-        Task<TEntity?> FindAsync(
-            Expression<Func<TEntity, bool>> predicate,
+        Task<IReadOnlyList<TEntity>> ListAsync(
+            ISpecification<TEntity> specification,
+            CancellationToken cancellationToken = default);
+
+        Task<IReadOnlyList<TEntity>> ListAllAsync(
+            CancellationToken cancellationToken = default);
+
+        Task<int> CountAsync(
+            ISpecification<TEntity> specification,
             CancellationToken cancellationToken = default);
 
         Task<bool> ExistsAsync(
-            Expression<Func<TEntity, bool>> predicate,
+            ISpecification<TEntity> specification,
             CancellationToken cancellationToken = default);
 
-        // Commands
-        Task AddAsync(TEntity entity, CancellationToken cancellationToken = default);
-        Task AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);
+        // Command Methods
+        Task<TEntity> AddAsync(
+            TEntity entity,
+            CancellationToken cancellationToken = default);
+
+        Task AddRangeAsync(
+            IEnumerable<TEntity> entities,
+            CancellationToken cancellationToken = default);
 
         void Update(TEntity entity);
         void UpdateRange(IEnumerable<TEntity> entities);
@@ -35,14 +52,26 @@ namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
 
-        // Attach for update scenarios
-        void Attach(TEntity entity);
-        void AttachRange(IEnumerable<TEntity> entities);
+        // Bulk Operations for Performance
+        Task BulkInsertAsync(
+            IList<TEntity> entities,
+            CancellationToken cancellationToken = default);
 
-        // Detach
+        Task BulkUpdateAsync(
+            IList<TEntity> entities,
+            CancellationToken cancellationToken = default);
+
+        Task BulkDeleteAsync(
+            IList<TEntity> entities,
+            CancellationToken cancellationToken = default);
+
+        // Attach & Detach
+        void Attach(TEntity entity);
         void Detach(TEntity entity);
 
-        // Check tracking state
+        // Tracking
         EntityState GetEntityState(TEntity entity);
+        void SetEntityState(TEntity entity, EntityState state);
     }
 }
+
