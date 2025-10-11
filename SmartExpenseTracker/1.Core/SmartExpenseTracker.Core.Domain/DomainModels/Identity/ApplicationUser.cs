@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using SmartExpenseTracker.Core.Domain.Contracts.Common;
+using SmartExpenseTracker.Core.Domain.Events.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,11 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
 {
-    public class ApplicationUser : IdentityUser<Guid>
+    public class ApplicationUser : IdentityUser<Guid>, IBaseEntity
     {
+        private readonly List<IDomainEvent> _domainEvents = new();
+        public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
+
         // Basic Information
         public string FirstName { get; private set; } = string.Empty;
         public string LastName { get; private set; } = string.Empty;
@@ -17,8 +22,10 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
 
         // Status & Activity
         public bool IsActive { get; private set; } = true;
-        public DateTime CreatedAt { get; private set; }
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime CreatedAt { get;  set; }
+        public string? CreatedBy { get;  set; }
+        public DateTime? ModifiedAt { get;  set; }
+        public string? ModifiedBy { get;  set; }
         public DateTime? LastLoginAt { get; private set; }
         public string? LastLoginIp { get; private set; }
         public int FailedLoginAttempts { get; private set; }
@@ -45,6 +52,8 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             = new HashSet<UserLoginHistory>();
         public virtual ICollection<UserActivity> Activities { get; private set; }
             = new HashSet<UserActivity>();
+        
+        public bool IsDeleted { get;  set; }
 
         // Constructor
         private ApplicationUser() { } // For EF Core
@@ -68,6 +77,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             PhoneNumber = phoneNumber;
             CreatedAt = createdAt;
             SecurityStamp = Guid.NewGuid().ToString();
+            _domainEvents = new List<IDomainEvent>();
         }
 
         // Domain Methods
@@ -77,7 +87,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             LastName = lastName;
             if (profileImageUrl != null)
                 ProfileImageUrl = profileImageUrl;
-            UpdatedAt = createdAt;
+            ModifiedAt = createdAt;
         }
 
         public void SetRefreshToken(DateTime createdAt, string refreshToken, int expirationDays)
@@ -151,6 +161,27 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
                 10000,
                 HashAlgorithmName.SHA256);
             return Convert.ToBase64String(pbkdf2.GetBytes(32));
+        }
+
+        public void AddDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Add(domainEvent);
+        }
+
+        public void RemoveDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Remove(domainEvent);
+        }
+
+        public void ClearDomainEvents()
+        {
+            _domainEvents.Clear();
+        }
+
+        public void MarkAsDeleted(DateTime modifiedAt)
+        {
+            IsDeleted = true;
+            ModifiedAt = modifiedAt;
         }
     }
 

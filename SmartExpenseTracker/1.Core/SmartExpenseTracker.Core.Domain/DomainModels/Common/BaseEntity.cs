@@ -1,4 +1,5 @@
-﻿using SmartExpenseTracker.Core.Domain.Events.Base;
+﻿using SmartExpenseTracker.Core.Domain.Contracts.Common;
+using SmartExpenseTracker.Core.Domain.Events.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +8,22 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.Domain.DomainModels.Common
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity : IBaseEntity
     {
         private readonly List<IDomainEvent> _domainEvents = new();
         public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
         public Guid Id { get; protected set; }
-        public DateTime CreatedAt { get; set; }
-        public string? CreatedBy { get; set; }
-        public DateTime? ModifiedAt { get; set; }
-        public string? ModifiedBy { get; set; }
-        public bool IsDeleted { get; set; }
+
+        public DateTime CreatedAt { get; protected set; }
+
+        public string? CreatedBy { get; protected set; }
+
+        public DateTime? ModifiedAt { get; protected set; }
+
+        public string? ModifiedBy { get; protected set; }
+
+        public bool IsDeleted { get; protected set; }
 
         protected BaseEntity(Guid id, DateTime createdAt)
         {

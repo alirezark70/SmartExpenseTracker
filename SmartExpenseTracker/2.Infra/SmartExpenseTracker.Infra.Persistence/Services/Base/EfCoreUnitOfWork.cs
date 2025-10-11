@@ -1,28 +1,46 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.Logging;
+using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Users;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Common;
+using SmartExpenseTracker.Core.Domain.Events.Base;
 using SmartExpenseTracker.Infra.Persistence.Context;
+using System.Data;
 
 namespace SmartExpenseTracker.Infra.Persistence.Services.Base
 {
-    public class EfCoreUnitOfWork : IUnitOfWork
+    public sealed class EfCoreUnitOfWork : IUnitOfWork
     {
         private readonly WriteDbContext _context;
+        private readonly ILogger<EfCoreUnitOfWork> _logger;
+        private readonly IDateTimeProvider _dateTimeProvider;
         private readonly Dictionary<Type, object> _repositories;
-        private IDbContextTransaction? _transaction;
+        private readonly List<IDbContextTransaction> _transactions;
         private bool _disposed;
 
-        public EfCoreUnitOfWork(WriteDbContext context)
+        // Specialized Repositories
+        private IUserRepository? _userRepository;
+
+        public EfCoreUnitOfWork(
+            WriteDbContext context,
+            ILogger<EfCoreUnitOfWork> logger,
+            IDateTimeProvider dateTimeProvider)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _dateTimeProvider = dateTimeProvider ?? throw new ArgumentNullException(nameof(dateTimeProvider));
             _repositories = new Dictionary<Type, object>();
+            _transactions = new List<IDbContextTransaction>();
         }
 
-        public DbContext Context => _context;
-        public bool HasActiveTransaction => _transaction != null;
+        public bool HasActiveTransaction => _transactions.Any();
+
+        public IUserRepository UserRepository
+            => _userRepository ??= new UserRepository(_context);
 
         public IRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {
@@ -38,63 +56,192 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             return (IRepository<TEntity>)_repositories[type];
         }
 
-        public async Task BeginTransactionAsync(
+        public async Task<IDbContextTransaction> BeginTransactionAsync(
+            IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
             CancellationToken cancellationToken = default)
         {
-            if (_transaction != null)
-                throw new InvalidOperationException("Transaction has already been started.");
+            var transaction = await _context.Database
+                .BeginTransactionAsync(isolationLevel, cancellationToken);
 
-            _transaction = await _context.Database.BeginTransactionAsync(
-                cancellationToken);
+            _transactions.Add(transaction);
+
+            _logger.LogDebug("Transaction started with isolation level: {IsolationLevel}", isolationLevel);
+
+            return transaction;
         }
 
-        public async Task CommitTransactionAsync(CancellationToken cancellationToken = default)
+        public async Task CommitTransactionAsync(
+            IDbContextTransaction transaction,
+            CancellationToken cancellationToken = default)
         {
-            if (_transaction == null)
-                throw new InvalidOperationException("No active transaction to commit.");
+            if (transaction == null)
+                throw new ArgumentNullException(nameof(transaction));
+
+            if (!_transactions.Contains(transaction))
+                throw new InvalidOperationException("Transaction is not managed by this unit of work");
 
             try
             {
-                await _context.SaveChangesAsync(cancellationToken);
-                await _transaction.CommitAsync(cancellationToken);
+                await SaveChangesAsync(cancellationToken);
+                await transaction.CommitAsync(cancellationToken);
+
+                _logger.LogDebug("Transaction committed successfully");
             }
-            catch
+            catch (Exception ex)
             {
-                await RollbackTransactionAsync(cancellationToken);
+                _logger.LogError(ex, "Error committing transaction");
+                await RollbackTransactionAsync(transaction, cancellationToken);
                 throw;
             }
             finally
             {
-                if (_transaction != null)
-                {
-                    await _transaction.DisposeAsync();
-                    _transaction = null;
-                }
+                _transactions.Remove(transaction);
+                await transaction.DisposeAsync();
             }
         }
 
-        public async Task RollbackTransactionAsync(CancellationToken cancellationToken = default)
+        public async Task RollbackTransactionAsync(
+            IDbContextTransaction transaction,
+            CancellationToken cancellationToken = default)
         {
-            if (_transaction == null)
-                throw new InvalidOperationException("No active transaction to rollback.");
+            if (transaction == null)
+                throw new ArgumentNullException(nameof(transaction));
 
             try
             {
-                await _transaction.RollbackAsync(cancellationToken);
+                await transaction.RollbackAsync(cancellationToken);
+                _logger.LogDebug("Transaction rolled back");
             }
             finally
             {
-                if (_transaction != null)
-                {
-                    await _transaction.DisposeAsync();
-                    _transaction = null;
-                }
+                _transactions.Remove(transaction);
+                await transaction.DisposeAsync();
             }
         }
 
         public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.SaveChangesAsync(cancellationToken);
+            try
+            {
+                // Update audit fields
+                UpdateAuditableEntities();
+
+                // Get domain events before saving
+                var domainEvents = GetDomainEvents();
+
+                var result = await _context.SaveChangesAsync(cancellationToken);
+
+                // Dispatch domain events after successful save
+                await DispatchDomainEvents(domainEvents);
+
+                return result;
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                _logger.LogError(ex, "Concurrency exception occurred");
+                throw new ConcurrencyException("The entity has been modified by another user", ex);
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex, "Database update exception occurred");
+                throw new DataAccessException("An error occurred while saving changes", ex);
+            }
+        }
+
+        public async Task<int> SaveChangesAsync(string userId, CancellationToken cancellationToken = default)
+        {
+            UpdateAuditableEntities(userId);
+            return await SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task<T> ExecuteInTransactionAsync<T>(
+            Func<Task<T>> action,
+            IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
+            CancellationToken cancellationToken = default)
+        {
+            var strategy = _context.Database.CreateExecutionStrategy();
+
+            return await strategy.ExecuteAsync(async () =>
+            {
+                await using var transaction = await BeginTransactionAsync(isolationLevel, cancellationToken);
+                try
+                {
+                    var result = await action();
+                    await CommitTransactionAsync(transaction, cancellationToken);
+                    return result;
+                }
+                catch
+                {
+                    await RollbackTransactionAsync(transaction, cancellationToken);
+                    throw;
+                }
+            });
+        }
+
+        public async Task<int> ExecuteSqlRawAsync(
+            string sql,
+            CancellationToken cancellationToken = default,
+            params object[] parameters)
+        {
+            return await _context.Database
+                .ExecuteSqlRawAsync(sql, parameters, cancellationToken);
+        }
+
+        public async Task<List<T>> SqlQueryAsync<T>(
+            string sql,
+            CancellationToken cancellationToken = default,
+            params object[] parameters) where T : class
+        {
+            return await _context.Set<T>()
+                .FromSqlRaw(sql, parameters)
+                .ToListAsync(cancellationToken);
+        }
+
+        public void ClearChangeTracker()
+        {
+            _context.ChangeTracker.Clear();
+        }
+
+        public async Task ReloadEntityAsync<TEntity>(TEntity entity) where TEntity : BaseEntity
+        {
+            await _context.Entry(entity).ReloadAsync();
+        }
+
+        private void UpdateAuditableEntities(string? userId = null)
+        {
+            var entries = _context.ChangeTracker
+                .Entries<IAuditableEntity>()
+                .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+
+            foreach (var entry in entries)
+            {
+                if (entry.State == EntityState.Added)
+                {
+                    entry.Entity.CreatedAt = _dateTimeProvider.GetDateTimeUtcNow();
+                    entry.Entity.CreatedBy = userId;
+                }
+
+                entry.Entity.UpdatedAt = _dateTimeProvider.GetDateTimeUtcNow();
+                entry.Entity.UpdatedBy = userId;
+            }
+        }
+
+        private List<IDomainEvent> GetDomainEvents()
+        {
+            return _context.ChangeTracker
+                .Entries<BaseEntity>()
+                .SelectMany(x => x.Entity.DomainEvents)
+                .ToList();
+        }
+
+        private async Task DispatchDomainEvents(List<IDomainEvent> domainEvents)
+        {
+            // This should be implemented with MediatR or your event dispatcher
+            foreach (var domainEvent in domainEvents)
+            {
+                // await _mediator.Publish(domainEvent);
+                _logger.LogDebug("Domain event dispatched: {EventType}", domainEvent.GetType().Name);
+            }
         }
 
         public void Dispose()
@@ -110,13 +257,17 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             GC.SuppressFinalize(this);
         }
 
-        protected virtual void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (_disposed) return;
 
             if (disposing)
             {
-                _transaction?.Dispose();
+                foreach (var transaction in _transactions)
+                {
+                    transaction?.Dispose();
+                }
+                _transactions.Clear();
                 _repositories.Clear();
                 _context?.Dispose();
             }
@@ -124,19 +275,18 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             _disposed = true;
         }
 
-        protected virtual async ValueTask DisposeAsyncCore()
+        private async ValueTask DisposeAsyncCore()
         {
-            if (_transaction != null)
+            if (_disposed) return;
+
+            foreach (var transaction in _transactions)
             {
-                await _transaction.DisposeAsync();
+                if (transaction != null)
+                    await transaction.DisposeAsync();
             }
 
             if (_context != null)
-            {
                 await _context.DisposeAsync();
-            }
         }
-
-        
     }
 }

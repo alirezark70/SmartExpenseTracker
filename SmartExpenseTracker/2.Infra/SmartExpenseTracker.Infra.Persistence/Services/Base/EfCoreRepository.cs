@@ -25,28 +25,67 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
 
         public async Task<TEntity?> GetByIdAsync(
             object id,
-            CancellationToken cancellationToken = default)
+            CancellationToken cancellationToken = default,
+            params Expression<Func<TEntity, object>>[] includes)
         {
-            return await _dbSet.FindAsync(new[] { id }, cancellationToken);
+            var query = _dbSet.AsQueryable();
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.FirstOrDefaultAsync(
+                e => e.Id.Equals(id),
+                cancellationToken);
         }
 
-        public async Task<TEntity?> FindAsync(
-            Expression<Func<TEntity, bool>> predicate,
+        public async Task<TEntity?> GetBySpecAsync(
+            ISpecification<TEntity> specification,
             CancellationToken cancellationToken = default)
         {
-            return await _dbSet.FirstOrDefaultAsync(predicate, cancellationToken);
+            return await ApplySpecification(specification)
+                .FirstOrDefaultAsync(cancellationToken);
+        }
+
+        public async Task<IReadOnlyList<TEntity>> ListAsync(
+            ISpecification<TEntity> specification,
+            CancellationToken cancellationToken = default)
+        {
+            return await ApplySpecification(specification)
+                .ToListAsync(cancellationToken);
+        }
+
+        public async Task<IReadOnlyList<TEntity>> ListAllAsync(
+            CancellationToken cancellationToken = default)
+        {
+            return await _dbSet
+                .AsNoTracking()
+                .ToListAsync(cancellationToken);
+        }
+
+        public async Task<int> CountAsync(
+            ISpecification<TEntity> specification,
+            CancellationToken cancellationToken = default)
+        {
+            return await ApplySpecification(specification)
+                .CountAsync(cancellationToken);
         }
 
         public async Task<bool> ExistsAsync(
-            Expression<Func<TEntity, bool>> predicate,
+            ISpecification<TEntity> specification,
             CancellationToken cancellationToken = default)
         {
-            return await _dbSet.AnyAsync(predicate, cancellationToken);
+            return await ApplySpecification(specification)
+                .AnyAsync(cancellationToken);
         }
 
-        public async Task AddAsync(TEntity entity, CancellationToken cancellationToken = default)
+        public async Task<TEntity> AddAsync(
+            TEntity entity,
+            CancellationToken cancellationToken = default)
         {
             await _dbSet.AddAsync(entity, cancellationToken);
+            return entity;
         }
 
         public async Task AddRangeAsync(
@@ -76,14 +115,31 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             _dbSet.RemoveRange(entities);
         }
 
+        // Bulk Operations using EFCore.BulkExtensions
+        public async Task BulkInsertAsync(
+            IList<TEntity> entities,
+            CancellationToken cancellationToken = default)
+        {
+            await _context.BulkInsertAsync(entities, cancellationToken: cancellationToken);
+        }
+
+        public async Task BulkUpdateAsync(
+            IList<TEntity> entities,
+            CancellationToken cancellationToken = default)
+        {
+            await _context.BulkUpdateAsync(entities, cancellationToken: cancellationToken);
+        }
+
+        public async Task BulkDeleteAsync(
+            IList<TEntity> entities,
+            CancellationToken cancellationToken = default)
+        {
+            await _context.BulkDeleteAsync(entities, cancellationToken: cancellationToken);
+        }
+
         public void Attach(TEntity entity)
         {
             _dbSet.Attach(entity);
-        }
-
-        public void AttachRange(IEnumerable<TEntity> entities)
-        {
-            _dbSet.AttachRange(entities);
         }
 
         public void Detach(TEntity entity)
@@ -94,6 +150,60 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
         public EntityState GetEntityState(TEntity entity)
         {
             return _context.Entry(entity).State;
+        }
+
+        public void SetEntityState(TEntity entity, EntityState state)
+        {
+            _context.Entry(entity).State = state;
+        }
+
+        // Helper method to apply specification
+        private IQueryable<TEntity> ApplySpecification(ISpecification<TEntity> spec)
+        {
+            var query = _dbSet.AsQueryable();
+
+            if (spec.Criteria != null)
+            {
+                query = query.Where(spec.Criteria);
+            }
+
+            // Apply includes
+            query = spec.Includes.Aggregate(query,
+                (current, include) => current.Include(include));
+
+            // Apply string includes
+            query = spec.IncludeStrings.Aggregate(query,
+                (current, include) => current.Include(include));
+
+            // Apply ordering
+            if (spec.OrderBy != null)
+            {
+                query = query.OrderBy(spec.OrderBy);
+            }
+            else if (spec.OrderByDescending != null)
+            {
+                query = query.OrderByDescending(spec.OrderByDescending);
+            }
+
+            // Apply paging
+            if (spec.IsPagingEnabled)
+            {
+                query = query.Skip(spec.Skip).Take(spec.Take);
+            }
+
+            // Apply distinct
+            if (spec.IsDistinct)
+            {
+                query = query.Distinct();
+            }
+
+            // Apply tracking
+            if (spec.AsNoTracking)
+            {
+                query = query.AsNoTracking();
+            }
+
+            return query;
         }
     }
 }
