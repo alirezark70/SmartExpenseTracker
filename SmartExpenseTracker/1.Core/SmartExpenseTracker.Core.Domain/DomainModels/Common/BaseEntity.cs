@@ -15,20 +15,19 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Common
 
         public Guid Id { get; protected set; }
 
-        public DateTime CreatedAt { get; protected set; }
+        public DateTime CreatedAt { get;  set; }
 
-        public string? CreatedBy { get; protected set; }
+        public string? CreatedBy { get;  set; }
 
-        public DateTime? ModifiedAt { get; protected set; }
+        public DateTime? ModifiedAt { get;  set; }
 
-        public string? ModifiedBy { get; protected set; }
+        public string? ModifiedBy { get;  set; }
 
         public bool IsDeleted { get; protected set; }
 
-        protected BaseEntity(Guid id, DateTime createdAt)
+        protected BaseEntity(Guid id)
         {
             Id = id;
-            CreatedAt = createdAt;
         }
 
 

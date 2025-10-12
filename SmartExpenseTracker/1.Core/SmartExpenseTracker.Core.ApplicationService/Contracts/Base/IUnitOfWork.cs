@@ -20,6 +20,13 @@ namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Base
         // Specialized Repositories
         IUserRepository UserRepository { get; }
 
+
+        // Transaction Management without parameter
+        Task BeginTransactionAsync(CancellationToken cancellationToken = default);
+        Task CommitTransactionAsync(CancellationToken cancellationToken = default);
+        Task RollbackTransactionAsync(CancellationToken cancellationToken = default);
+
+
         // Transaction Management
         Task<IDbContextTransaction> BeginTransactionAsync(
             IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,

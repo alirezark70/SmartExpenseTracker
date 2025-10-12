@@ -17,18 +17,16 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
         private readonly List<IDomainEvent> _domainEvents = new();
         public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
         public string? Description { get;private set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } 
 
-        public string? CreatedBy { get;private set; }
-        public DateTime? ModifiedAt { get; private set; }
-        public string? ModifiedBy { get; private set; }
+        public string? CreatedBy { get; set; }
+        public DateTime? ModifiedAt { get;  set; }
+        public string? ModifiedBy { get;  set; }
         public bool IsDeleted { get; private set; }
 
-        public void AddNewRole(Guid id,DateTime createAt,string createBy,string description)
+        public void AddNewRole(Guid id,string description)
         {
             Id=id;
-            CreatedAt=createAt;
-            CreatedBy=createBy;
             Description = description;
         }
 

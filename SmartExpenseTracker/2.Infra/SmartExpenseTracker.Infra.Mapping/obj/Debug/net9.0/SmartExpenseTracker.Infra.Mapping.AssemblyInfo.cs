@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.Infra.Mapping")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27a9425404cccd6b57a25ea3f36783ff1339dc5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bab7f5358e33e742a878f3c8a7d7b2b508457871")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.Infra.Mapping")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.Infra.Mapping")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

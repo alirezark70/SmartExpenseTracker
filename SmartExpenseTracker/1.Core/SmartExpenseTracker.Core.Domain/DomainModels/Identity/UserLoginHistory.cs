@@ -20,18 +20,16 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
 
         public UserLoginHistory(
             Guid id,
-            DateTime createAt,
             Guid userId,
             string ipAddress,
             string? userAgent,
             bool isSuccessful,
-            string? failureReason = null) :base(id, createAt)
+            string? failureReason = null) :base(id)
         {
             Id = id;
             UserId = userId;
             IpAddress = ipAddress;
             UserAgent = userAgent;
-            LoginTime = createAt;
             IsSuccessful = isSuccessful;
             FailureReason = failureReason;
         }

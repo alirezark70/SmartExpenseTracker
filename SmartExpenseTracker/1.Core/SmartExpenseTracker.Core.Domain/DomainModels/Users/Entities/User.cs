@@ -10,7 +10,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities
 {
     public sealed class User : BaseEntity
     {
-        public User(Guid id, DateTime createdAt) : base(id, createdAt)
+        public User(Guid id, DateTime createdAt) : base(id)
         {
         }
         private string _email;
@@ -39,7 +39,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities
             string firstName,
             string lastName,
             string passwordHash,
-            Currency defaultCurrency) :base(id, createdAt)
+            Currency defaultCurrency) :base(id)
         {
             SetEmail(email);
             SetFirstName(firstName);

@@ -20,19 +20,17 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
 
         public UserActivity(
             Guid id,
-            DateTime createAt,
             Guid userId,
             string activityType,
             string? description = null,
             string? ipAddress = null,
-            string? metaData = null) :base(id,createAt)
+            string? metaData = null) :base(id)
         {
             Id = id;
             UserId = userId;
             ActivityType = activityType;
             Description = description;
             IpAddress = ipAddress;
-            OccurredAt = createAt;
             MetaData = metaData;
         }
 

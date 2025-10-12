@@ -7,7 +7,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
 {
     public class Budget : BaseEntity
     {
-        public Budget(Guid id, DateTime createdAt) : base(id, createdAt)
+        public Budget(Guid id, DateTime createdAt) : base(id)
         {
             _alerts = new List<BudgetAlert>();
             _spent = Money.Zero("USD");

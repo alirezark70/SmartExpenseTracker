@@ -9,7 +9,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities
 {
     public sealed class Role : BaseEntity
     {
-        public Role(Guid id, DateTime createdAt) : base(id, createdAt)
+        public Role(Guid id, DateTime createdAt) : base(id)
         {
         }
 

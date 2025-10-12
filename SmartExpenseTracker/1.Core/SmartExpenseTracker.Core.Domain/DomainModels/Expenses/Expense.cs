@@ -14,7 +14,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
     {
         private  Guid _id;
         private readonly DateTime _createdAt;
-        public Expense(Guid id, DateTime createdAt) : base(id, createdAt)
+        public Expense(Guid id, DateTime createdAt) : base(id)
         {
             _id = id;
             _createdAt = createdAt;

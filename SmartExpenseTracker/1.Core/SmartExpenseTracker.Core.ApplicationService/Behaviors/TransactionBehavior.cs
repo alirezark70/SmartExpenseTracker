@@ -31,6 +31,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
             if (_unitOfWork.HasActiveTransaction)
                 return await next();
 
+           
 
             await _unitOfWork.BeginTransactionAsync(cancellationToken);
 

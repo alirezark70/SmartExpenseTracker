@@ -82,10 +82,10 @@ namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
                 var permissions = attribute?.Permissions?.Split(',', StringSplitOptions.RemoveEmptyEntries)
                     .Select(r => r.Trim());
 
-                isAuthorized = permissions.Any(persmission => _currentUserService.HasPermission(persmission));
+                isAuthorized = permissions!= null? permissions.Any(persmission => _currentUserService.HasPermission(persmission)):false;
             }
             // Check permissions
-            if (isAuthorized && !string.IsNullOrWhiteSpace(attribute.Permissions))
+            if (isAuthorized && !string.IsNullOrWhiteSpace(attribute?.Permissions))
             {
                 var permissions = attribute.Permissions.Split(',', StringSplitOptions.RemoveEmptyEntries)
                     .Select(p => p.Trim());

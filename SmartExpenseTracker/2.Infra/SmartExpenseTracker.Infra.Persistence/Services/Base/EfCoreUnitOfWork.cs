@@ -5,6 +5,7 @@ using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Users;
+using SmartExpenseTracker.Core.ApplicationService.Exceptions;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Common;
 using SmartExpenseTracker.Core.Domain.Events.Base;
@@ -21,7 +22,7 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
         private readonly Dictionary<Type, object> _repositories;
         private readonly List<IDbContextTransaction> _transactions;
         private bool _disposed;
-
+        private IDbContextTransaction? _currentTransaction; 
         // Specialized Repositories
         private IUserRepository? _userRepository;
 
@@ -207,11 +208,56 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             await _context.Entry(entity).ReloadAsync();
         }
 
+
+        public async Task BeginTransactionAsync(CancellationToken cancellationToken = default)
+        {
+            if (_currentTransaction != null)
+            {
+                _logger.LogWarning("Transaction already started. Skipping new transaction creation.");
+                return;
+            }
+
+            _logger.LogDebug("Starting new transaction with default isolation level");
+
+            _currentTransaction = await BeginTransactionAsync(
+                IsolationLevel.ReadCommitted,
+                cancellationToken);
+        }
+
+
+        // ✅ متد ساده برای TransactionBehavior (بدون پارامتر)
+        public async Task CommitTransactionAsync(CancellationToken cancellationToken = default)
+        {
+            if (_currentTransaction == null)
+            {
+                throw new InvalidOperationException(
+                    "No active transaction to commit. Call BeginTransactionAsync first.");
+            }
+
+            await CommitTransactionAsync(_currentTransaction, cancellationToken);
+        }
+
+        // ✅ متد ساده برای TransactionBehavior (بدون پارامتر)
+        public async Task RollbackTransactionAsync(CancellationToken cancellationToken = default)
+        {
+            if (_currentTransaction == null)
+            {
+                throw new InvalidOperationException(
+                    "No active transaction to rollback. Call BeginTransactionAsync first.");
+            }
+
+            await RollbackTransactionAsync(_currentTransaction, cancellationToken);
+        }
+
+      
+
+
         private void UpdateAuditableEntities(string? userId = null)
         {
             var entries = _context.ChangeTracker
-                .Entries<IAuditableEntity>()
-                .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+            .Entries<BaseEntity>() 
+            .Where(e => e.State is EntityState.Added or EntityState.Modified)
+            .ToList();
 
             foreach (var entry in entries)
             {
@@ -221,8 +267,8 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
                     entry.Entity.CreatedBy = userId;
                 }
 
-                entry.Entity.UpdatedAt = _dateTimeProvider.GetDateTimeUtcNow();
-                entry.Entity.UpdatedBy = userId;
+                entry.Entity.ModifiedAt = _dateTimeProvider.GetDateTimeUtcNow();
+                entry.Entity.ModifiedBy = userId;
             }
         }
 
