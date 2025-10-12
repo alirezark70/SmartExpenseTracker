@@ -225,7 +225,6 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
         }
 
 
-        // ✅ متد ساده برای TransactionBehavior (بدون پارامتر)
         public async Task CommitTransactionAsync(CancellationToken cancellationToken = default)
         {
             if (_currentTransaction == null)
@@ -237,7 +236,6 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             await CommitTransactionAsync(_currentTransaction, cancellationToken);
         }
 
-        // ✅ متد ساده برای TransactionBehavior (بدون پارامتر)
         public async Task RollbackTransactionAsync(CancellationToken cancellationToken = default)
         {
             if (_currentTransaction == null)

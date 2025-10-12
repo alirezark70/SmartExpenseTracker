@@ -1,5 +1,4 @@
 ﻿using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
-using SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities;
 using SmartExpenseTracker.Core.Domain.Enums.Users;
 using System;
 using System.Collections.Generic;

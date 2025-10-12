@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Budgets;
 using SmartExpenseTracker.Core.Domain.DomainModels.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
@@ -70,6 +72,8 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
             SeedRoles(builder);
         }
 
+    
+
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             // Publish domain events before saving
@@ -89,20 +93,18 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
         {
             var roles = new List<ApplicationRole>
         {
-            new ApplicationRole
+            new ApplicationRole("مدیر سیستم")
             {
                 Id = Guid.Parse("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"),
                 Name = "Admin",
                 NormalizedName = "ADMIN",
-                Description = "مدیر سیستم",
                 ConcurrencyStamp = Guid.NewGuid().ToString()
             },
-            new ApplicationRole
+            new ApplicationRole("کاربر عادی")
             {
                 Id = Guid.Parse("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"),
                 Name = "User",
                 NormalizedName = "USER",
-                Description = "کاربر عادی",
                 ConcurrencyStamp = Guid.NewGuid().ToString()
             }
         };

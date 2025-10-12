@@ -115,28 +115,7 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             _dbSet.RemoveRange(entities);
         }
 
-        // Bulk Operations using EFCore.BulkExtensions
-        public async Task BulkInsertAsync(
-            IList<TEntity> entities,
-            CancellationToken cancellationToken = default)
-        {
-            await _context.BulkInsertAsync(entities, cancellationToken: cancellationToken);
-        }
-
-        public async Task BulkUpdateAsync(
-            IList<TEntity> entities,
-            CancellationToken cancellationToken = default)
-        {
-            await _context.BulkUpdateAsync(entities, cancellationToken: cancellationToken);
-        }
-
-        public async Task BulkDeleteAsync(
-            IList<TEntity> entities,
-            CancellationToken cancellationToken = default)
-        {
-            await _context.BulkDeleteAsync(entities, cancellationToken: cancellationToken);
-        }
-
+       
         public void Attach(TEntity entity)
         {
             _dbSet.Attach(entity);

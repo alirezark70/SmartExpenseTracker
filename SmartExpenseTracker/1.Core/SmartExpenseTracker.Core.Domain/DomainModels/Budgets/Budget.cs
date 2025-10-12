@@ -92,7 +92,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             if (thresholdPercentage <= 0 || thresholdPercentage > 100)
                 throw new ArgumentException("Threshold percentage must be between 0 and 100");
 
-            var alert = new BudgetAlert(Id, thresholdPercentage, budgetAlertId, createdAt);
+            var alert = new BudgetAlert(Id, thresholdPercentage, budgetAlertId);
 
             if (!_alerts.Any(a => a.ThresholdPercentage == thresholdPercentage))
             {
@@ -107,7 +107,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             {
                 if (UsagePercentage >= alert.ThresholdPercentage)
                 {
-                    alert.Trigger();
+                    alert.Trigger(CreatedAt);
                     AddDomainEvent(new BudgetThresholdReachedEvent(budgetThresholdReachedEventId, occurredOn, Id, UsagePercentage, alert.ThresholdPercentage));
                 }
             }

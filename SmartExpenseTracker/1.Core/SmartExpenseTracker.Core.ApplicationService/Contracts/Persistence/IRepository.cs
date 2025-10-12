@@ -52,19 +52,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
 
-        // Bulk Operations for Performance
-        Task BulkInsertAsync(
-            IList<TEntity> entities,
-            CancellationToken cancellationToken = default);
-
-        Task BulkUpdateAsync(
-            IList<TEntity> entities,
-            CancellationToken cancellationToken = default);
-
-        Task BulkDeleteAsync(
-            IList<TEntity> entities,
-            CancellationToken cancellationToken = default);
-
+      
         // Attach & Detach
         void Attach(TEntity entity);
         void Detach(TEntity entity);

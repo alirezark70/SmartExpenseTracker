@@ -8,14 +8,7 @@ using SmartExpenseTracker.Core.ApplicationService.Dtos.Identity;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
-using SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities;
 using SmartExpenseTracker.Core.Domain.Enums.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
 {
     public class RegisterCommandHandler : ICommandHandler<RegisterCommand, ApiResponse<AuthResponseDto>>
@@ -51,18 +44,13 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
                 return ApiResponse<AuthResponseDto>.Failure("ایمیل قبلاً ثبت شده است");
 
             // ایجاد کاربر جدید
-            var user = new ApplicationUser
-            {
-                Id = _idGenerator.GetId(),
-                UserName = request.Request.UserName,
-                Email = request.Request.Email,
-                FirstName = request.Request.FirstName,
-                LastName = request.Request.LastName,
-                PhoneNumber = request.Request.PhoneNumber,
-                EmailConfirmed = false, // برای پیاده‌سازی تایید ایمیل
-                IsActive = true,
-                CreatedAt = _dateTimeProvider.GetDateTimeUtcNow(),
-            };
+            var user = new ApplicationUser(_idGenerator.GetId(),
+                _dateTimeProvider.GetDateTimeUtcNow(),
+                request.Request.UserName,
+                request.Request.Email,
+                request.Request.FirstName,
+                request.Request.LastName,
+                request.Request.PhoneNumber);
 
             var createResult = await _userManager.CreateAsync(user, request.Request.Password);
 
@@ -87,8 +75,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             var refreshToken = _jwtTokenService.GenerateRefreshToken();
 
             // ذخیره Refresh Token
-            user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpirationDays);
+            user.SetRefreshToken(_dateTimeProvider.GetDateTimeUtcNow(), refreshToken, 1);
             await _userManager.UpdateAsync(user);
 
             var response = new AuthResponseDto

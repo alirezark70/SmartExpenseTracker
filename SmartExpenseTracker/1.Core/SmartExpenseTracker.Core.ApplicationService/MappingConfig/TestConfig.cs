@@ -1,12 +1,5 @@
 ﻿using Mapster;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
-using SmartExpenseTracker.Core.Domain.DomainModels.Users.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SmartExpenseTracker.Core.ApplicationService.MappingConfig
 {
     public class TestConfig : IMappingConfig

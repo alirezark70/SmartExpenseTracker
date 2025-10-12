@@ -13,6 +13,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
     public class ApplicationRole : IdentityRole<Guid>, IBaseEntity
     {
         public ApplicationRole() { } // for EF Core
+        public ApplicationRole(string description) { Description = description; } 
 
         private readonly List<IDomainEvent> _domainEvents = new();
         public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
