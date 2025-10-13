@@ -66,9 +66,8 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             var refreshToken = _jwtTokenService.GenerateRefreshToken();
 
             // به‌روزرسانی اطلاعات ورود
-            user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = _dateTimeProvider.GetDateTimeUtcNow().AddDays(_jwtSettings.RefreshTokenExpirationDays);
-            user.LastLoginAt = _dateTimeProvider.GetDateTimeUtcNow();
+            user.SetRefreshToken(_dateTimeProvider.GetDateTimeUtcNow(), refreshToken, _jwtSettings.RefreshTokenExpirationDays);
+            user.RecordLogin(_dateTimeProvider.GetDateTimeUtcNow(),"");
             await _userManager.UpdateAsync(user);
 
             var response = new AuthResponseDto

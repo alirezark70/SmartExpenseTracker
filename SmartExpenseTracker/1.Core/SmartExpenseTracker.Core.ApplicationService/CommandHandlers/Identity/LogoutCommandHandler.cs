@@ -22,8 +22,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             if (user == null)
                 return  ApiResponse.Failure("کاربر یافت نشد",Domain.Enums.Response.ResponseStatus.NotFound);
 
-            user.RefreshToken = null;
-            user.RefreshTokenExpiryTime = null;
+            user.RevokeRefreshToken();
 
             await _userManager.UpdateAsync(user);
 

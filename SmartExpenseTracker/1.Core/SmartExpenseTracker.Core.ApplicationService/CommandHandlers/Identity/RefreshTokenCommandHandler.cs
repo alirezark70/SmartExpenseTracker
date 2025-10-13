@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using SmartExpenseTracker.Core.ApplicationService.Commands.Identity;
+using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Mediator;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
 using SmartExpenseTracker.Core.ApplicationService.Dtos.Identity;
@@ -22,15 +23,17 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IJwtTokenService _jwtTokenService;
         private readonly IJwtSettings _jwtSettings;
-
+        private readonly IDateTimeProvider _dateTimeProvider;
         public RefreshTokenCommandHandler(
             UserManager<ApplicationUser> userManager,
             IJwtTokenService jwtTokenService,
-            IOptions<IJwtSettings> jwtSettings)
+            IOptions<IJwtSettings> jwtSettings,
+            IDateTimeProvider dateTimeProvider)
         {
             _userManager = userManager;
             _jwtTokenService = jwtTokenService;
             _jwtSettings = jwtSettings.Value;
+            _dateTimeProvider = dateTimeProvider;
         }
 
         public async Task<ApiResponse<AuthResponseDto>> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
@@ -49,7 +52,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             if (user == null || !user.IsActive)
                 return ApiResponse<AuthResponseDto>.Failure("کاربر یافت نشد یا غیرفعال است");
 
-            if (user.RefreshToken != request.Request.RefreshToken)
+            if (!user.CheckEqualRefereshToken( request.Request.RefreshToken))
                 return ApiResponse<AuthResponseDto>.Failure("توکن تازه‌سازی نامعتبر است");
 
             if (user.RefreshTokenExpiryTime <= DateTime.UtcNow)
@@ -71,8 +74,8 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
 
 
 
-            user.RefreshToken = newRefreshToken;
-            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpirationDays);
+            user.SetRefreshToken(_dateTimeProvider.GetDateTimeNow(), newRefreshToken, _jwtSettings.RefreshTokenExpirationDays);
+            user.SetRefreshTokenExpiryTime(_dateTimeProvider.GetDateTimeNow().AddDays(_jwtSettings.RefreshTokenExpirationDays));
             await _userManager.UpdateAsync(user);
 
             var response = new AuthResponseDto
@@ -84,7 +87,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
                 LastName = user.LastName,
                 AccessToken = newAccessToken,
                 RefreshToken = newRefreshToken,
-                ExpiresAt = DateTime.UtcNow.AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
+                ExpiresAt = _dateTimeProvider.GetDateTimeNow().AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
                 Roles = roles.ToList()
             };
 
