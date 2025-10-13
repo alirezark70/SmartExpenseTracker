@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
 
   <ItemGroup>
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.Infra.Mapping\SmartExpenseTracker.Infra.Mapping.csproj" />

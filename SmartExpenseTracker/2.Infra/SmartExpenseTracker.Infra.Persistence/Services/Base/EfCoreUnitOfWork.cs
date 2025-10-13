@@ -40,8 +40,8 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
 
         public bool HasActiveTransaction => _transactions.Any();
 
-        public IUserRepository UserRepository
-            => _userRepository ??= new UserRepository(_context);
+        //public IUserRepository UserRepository
+        //    => _userRepository ??= new UserRepository(_context);
 
         public IRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {
