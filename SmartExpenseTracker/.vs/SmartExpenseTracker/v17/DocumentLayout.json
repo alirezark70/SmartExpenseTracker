@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\1.core\\smartexpensetracker.core.applicationservice\\smartexpensetracker.core.applicationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F76A6947-003D-455F-BD6C-57335562790D}|1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj|solutionrelative:1.core\\smartexpensetracker.core.applicationservice\\smartexpensetracker.core.applicationservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F5C3975-5B17-4321-A097-68685E4CC0D3}|2.Infra\\SmartExpenseTracker.Infra.Persistence\\SmartExpenseTracker.Infra.Persistence.csproj|c:\\users\\email\\source\\repos\\alirezark70\\smartexpensetracker\\smartexpensetracker\\2.infra\\smartexpensetracker.infra.persistence\\services\\base\\efcoreunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F5C3975-5B17-4321-A097-68685E4CC0D3}|2.Infra\\SmartExpenseTracker.Infra.Persistence\\SmartExpenseTracker.Infra.Persistence.csproj|solutionrelative:2.infra\\smartexpensetracker.infra.persistence\\services\\base\\efcoreunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,20 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SmartExpenseTracker.Core.ApplicationService",
-              "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj",
-              "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj",
-              "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj",
-              "RelativeToolTip": "1.Core\\SmartExpenseTracker.Core.ApplicationService\\SmartExpenseTracker.Core.ApplicationService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-13T19:06:24.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Identity\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Identity\\ApplicationUser.cs",
@@ -100,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ApplicationRole.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Identity\\ApplicationRole.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Identity\\ApplicationRole.cs",
@@ -112,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Budget.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Budgets\\Budget.cs",
@@ -124,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "WriteDbContext.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Persistence\\Context\\WriteDbContext.cs",
               "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Persistence\\Context\\WriteDbContext.cs",
@@ -136,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "IBaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\Contracts\\Common\\IBaseEntity.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\Contracts\\Common\\IBaseEntity.cs",
@@ -148,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Common\\BaseEntity.cs",
@@ -160,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "ApplicationUserRole.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Identity\\ApplicationUserRole.cs",
               "RelativeDocumentMoniker": "1.Core\\SmartExpenseTracker.Core.Domain\\DomainModels\\Identity\\ApplicationUserRole.cs",
@@ -172,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ApplicationUserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Persistence\\EntityConfigurations\\ApplicationUserConfiguration.cs",
               "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Persistence\\EntityConfigurations\\ApplicationUserConfiguration.cs",
@@ -184,20 +167,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EfCoreUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\EfCoreUnitOfWork.cs",
               "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\EfCoreUnitOfWork.cs",
               "ToolTip": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\EfCoreUnitOfWork.cs",
               "RelativeToolTip": "2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\EfCoreUnitOfWork.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAACMAAABuAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-11T18:31:15.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "EfCoreRepository.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\EfCoreRepository.cs",
               "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\EfCoreRepository.cs",
@@ -209,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "BaseSpecification.cs",
               "DocumentMoniker": "C:\\Users\\email\\source\\repos\\alirezark70\\SmartExpenseTracker\\SmartExpenseTracker\\2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\BaseSpecification.cs",
               "RelativeDocumentMoniker": "2.Infra\\SmartExpenseTracker.Infra.Persistence\\Services\\Base\\BaseSpecification.cs",
