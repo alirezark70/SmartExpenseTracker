@@ -6,13 +6,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Users;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
 using SmartExpenseTracker.Infra.Mapping.Contracts;
 using SmartExpenseTracker.Infra.Mapping.Services;
 using SmartExpenseTracker.Infra.Persistence.Configuration;
 using SmartExpenseTracker.Infra.Persistence.Context;
+using SmartExpenseTracker.Infra.Persistence.Repositories.Users;
+using SmartExpenseTracker.Infra.Persistence.Services.Base;
 using SmartExpenseTracker.Infra.Persistence.Services.Identity;
 using System;
 using System.Collections.Generic;
@@ -73,6 +77,10 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
             });
 
             services.AddScoped<IJwtTokenService, JwtTokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<IUnitOfWork, EfCoreUnitOfWork>();
+
 
             return services;
         }

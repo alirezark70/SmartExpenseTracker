@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
 {
-    public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : IRequest<TResponse>
     {
         private readonly ICurrentUserService _currentUserService;
         private readonly ILogger<AuthorizationBehaviour<TRequest, TResponse>> _logger;
-
 
         public AuthorizationBehaviour(ICurrentUserService currentUserService, ILogger<AuthorizationBehaviour<TRequest, TResponse>> logger)
         {
@@ -36,37 +36,37 @@ namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
             if (!_currentUserService.IsAuthenticated)
             {
                 _logger.LogWarning("Unauthorized access attempt for {RequestType}", typeof(TRequest).Name);
-
-                throw new UnauthorizedAccessException();
+                throw new UnauthorizedException("احراز هویت الزامی است");
             }
 
             foreach (var attribute in authorizeAttributes)
             {
                 var authorized = await IsAuthorizedAsync(attribute);
 
-                if (authorized)
+                if (!authorized) // تصحیح شرط - قبلا برعکس بود
                 {
                     _logger.LogWarning(
-                    "User {UserId} failed authorization for {RequestType}",
-                    _currentUserService.UserId,
-                    typeof(TRequest).Name);
+                        "User {UserId} failed authorization for {RequestType}",
+                        _currentUserService.UserId,
+                        typeof(TRequest).Name);
 
-                    throw new ForbiddenException();
+                    throw new ForbiddenException("شما دسترسی لازم برای این عملیات را ندارید");
                 }
             }
 
             _logger.LogInformation(
-            "User {UserId} authorized for {RequestType}",
-             _currentUserService.UserId,
-            typeof(TRequest).Name);
+                "User {UserId} authorized for {RequestType}",
+                _currentUserService.UserId,
+                typeof(TRequest).Name);
 
             return await next();
         }
+
         private Task<bool> IsAuthorizedAsync(AuthorizeAttribute attribute)
         {
             var isAuthorized = true;
 
-            //check roles
+            // Check roles
             if (!string.IsNullOrWhiteSpace(attribute.Roles))
             {
                 var roles = attribute.Roles.Split(',', StringSplitOptions.RemoveEmptyEntries)
@@ -75,17 +75,8 @@ namespace SmartExpenseTracker.Core.ApplicationService.Behaviors
                 isAuthorized = roles.Any(role => _currentUserService.IsInRole(role));
             }
 
-            //check permissions
-
-            if (isAuthorized && !string.IsNullOrWhiteSpace(attribute.Roles))
-            {
-                var permissions = attribute?.Permissions?.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .Select(r => r.Trim());
-
-                isAuthorized = permissions!= null? permissions.Any(persmission => _currentUserService.HasPermission(persmission)):false;
-            }
             // Check permissions
-            if (isAuthorized && !string.IsNullOrWhiteSpace(attribute?.Permissions))
+            if (isAuthorized && !string.IsNullOrWhiteSpace(attribute.Permissions))
             {
                 var permissions = attribute.Permissions.Split(',', StringSplitOptions.RemoveEmptyEntries)
                     .Select(p => p.Trim());

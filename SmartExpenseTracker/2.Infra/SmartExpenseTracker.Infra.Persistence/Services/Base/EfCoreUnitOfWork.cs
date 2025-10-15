@@ -10,6 +10,7 @@ using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Common;
 using SmartExpenseTracker.Core.Domain.Events.Base;
 using SmartExpenseTracker.Infra.Persistence.Context;
+using SmartExpenseTracker.Infra.Persistence.Repositories.Users;
 using System.Data;
 
 namespace SmartExpenseTracker.Infra.Persistence.Services.Base
@@ -29,19 +30,30 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
         public EfCoreUnitOfWork(
             WriteDbContext context,
             ILogger<EfCoreUnitOfWork> logger,
-            IDateTimeProvider dateTimeProvider)
+            IDateTimeProvider dateTimeProvider,
+            IUserRepository? userRepository)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _dateTimeProvider = dateTimeProvider ?? throw new ArgumentNullException(nameof(dateTimeProvider));
             _repositories = new Dictionary<Type, object>();
             _transactions = new List<IDbContextTransaction>();
+            _userRepository = userRepository;
         }
 
         public bool HasActiveTransaction => _transactions.Any();
 
-        //public IUserRepository UserRepository
-        //    => _userRepository ??= new UserRepository(_context);
+        public IUserRepository UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository = new UserRepository(_context);
+                }
+                return _userRepository;
+            }
+        }
 
         public IRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {
