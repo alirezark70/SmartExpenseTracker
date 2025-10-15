@@ -2,16 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Budgets;
 using SmartExpenseTracker.Core.Domain.DomainModels.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Infra.Persistence.Context
 {

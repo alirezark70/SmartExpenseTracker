@@ -115,15 +115,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             this.RefreshTokenExpiryTime = expiryTime;
         }
 
-        public bool CheckEqualRefereshToken( string refereshToken)
-        {
-            var salt = GenerateSalt();
-            var refereshTokenSalt= Convert.ToBase64String(salt);
-            var refereshTokenHash= HashToken(refereshToken, salt);
-            if (  this.RefreshTokenHash == refereshTokenHash)
-                return true;
-            return false;
-        }
+    
 
         public void RevokeRefreshToken()
         {

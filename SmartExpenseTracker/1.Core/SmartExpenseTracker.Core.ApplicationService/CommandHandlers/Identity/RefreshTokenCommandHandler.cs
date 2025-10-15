@@ -52,7 +52,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             if (user == null || !user.IsActive)
                 return ApiResponse<AuthResponseDto>.Failure("کاربر یافت نشد یا غیرفعال است");
 
-            if (!user.CheckEqualRefereshToken( request.Request.RefreshToken))
+            if (!user.ValidateRefreshToken(_dateTimeProvider.GetDateTimeNow(), request.Request.RefreshToken))
                 return ApiResponse<AuthResponseDto>.Failure("توکن تازه‌سازی نامعتبر است");
 
             if (user.RefreshTokenExpiryTime <= DateTime.UtcNow)
