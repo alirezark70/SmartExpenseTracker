@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartExpenseTracker.Infra.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c175b15c794a772e03c48659bfad561226a4ce43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e167d4e461222d75c4a3507d4f28ad2c800f68d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartExpenseTracker.Infra.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartExpenseTracker.Infra.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
