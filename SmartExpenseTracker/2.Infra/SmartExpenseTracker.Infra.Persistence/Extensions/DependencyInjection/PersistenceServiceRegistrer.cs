@@ -86,7 +86,7 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
 
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<ICustomContextAccessor, CustomContextAccessor>();
             services.AddScoped<IUnitOfWork, EfCoreUnitOfWork>();
 
 

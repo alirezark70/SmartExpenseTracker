@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartExpenseTracker.Core.ApplicationService.Commands.Identity;
 using SmartExpenseTracker.Core.ApplicationService.Contracts;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
 using SmartExpenseTracker.Core.ApplicationService.DataTransfareObject.Users;
 using SmartExpenseTracker.Core.ApplicationService.Dtos.Identity;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using SmartExpenseTracker.EndPoint.RestApi.Controllers.Base;
 using SmartExpenseTracker.Infra.Mapping.Contracts;
+using SmartExpenseTracker.Infra.Persistence.Services.Base;
 using System.Security.Claims;
 
 namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
@@ -17,12 +19,15 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
 
     public class AuthController : BaseApiController
     {
-        private readonly ICurrentUserService _currentUserService;
+        private readonly ILogger<BaseApiController> _logger;
         private readonly IDateTimeProvider _dateTimeProvider;
-        public AuthController(ILogger<PostController> logger, IMappingService mappingService, IMediator mediator, IDateTimeProvider dateTimeProvider, ICurrentUserService currentUserService) : base(logger, mappingService, mediator)
+        public AuthController(ILogger<PostController> logger,
+            IMappingService mappingService,
+            IMediator mediator, IDateTimeProvider dateTimeProvider,
+            ICustomContextAccessor customContextAccessor) : base( mappingService, mediator, customContextAccessor)
         {
+            _logger = logger;
             _dateTimeProvider = dateTimeProvider;
-            _currentUserService = currentUserService;
         }
 
         /// <summary>
@@ -61,11 +66,11 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
         [HttpGet("[Action]")]
         [Authorize]
         [ProducesResponseType(typeof(ApiResponse<CurrentUserDto>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetCurrentUser(CancellationToken cancellationToken)
+        public  IActionResult GetCurrentUser(CancellationToken cancellationToken)
         {
             try
             {
-                var currentUser = _currentUserService.GetCurrentUser(default);
+                var currentUser = _customContextAccessor.CurrentUser;
 
                 var currentUserDto = _mappingService.Map<CurrentUserDto>(currentUser);
 
@@ -90,7 +95,7 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
         {
             try
             {
-                var clientIp = HttpContext.Connection.RemoteIpAddress?.ToString();
+               
                 var command = new LoginCommand(request);
                 var result = await _mediator.Send(command, cancellationToken);
 
@@ -167,13 +172,13 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
         {
             try
             {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (!Guid.TryParse(userId, out var userGuid))
+                var userId = _customContextAccessor.UserId;
+                if (userId ==null || userId==default)
                 {
                     return Unauthorized(ErrorResponse.Create("کاربر یافت نشد"));
                 }
 
-                var command = new LogoutCommand(userGuid);
+                var command = new LogoutCommand(userId.Value);
                 var result = await _mediator.Send(command, cancellationToken);
 
                 if (result.IsSuccess)
@@ -204,13 +209,13 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
         {
             try
             {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (!Guid.TryParse(userId, out var userGuid))
+                var userId = _customContextAccessor.UserId;
+                if (userId == null || userId == default)
                 {
                     return Unauthorized(ErrorResponse.Create("کاربر یافت نشد"));
                 }
 
-                var command = new ChangePasswordCommand(userGuid, request);
+                var command = new ChangePasswordCommand(userId.Value, request);
                 var result = await _mediator.Send(command, cancellationToken);
 
                 if (result.IsSuccess)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartExpenseTracker.Core.Domain.Enums.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,6 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Users
         public Guid UserId { get; set; }
         public string UserName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public List<string> Roles { get; set; } = new();
+        public IReadOnlyList<RoleType> Roles { get; set; } = new List<RoleType>().AsReadOnly();
     }
 }
