@@ -16,20 +16,20 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IJwtTokenService _jwtTokenService;
         private readonly IJwtSettings _jwtSettings;
-        private readonly IIdGenerator<Guid> _idGenerator;
+        private readonly IGuidIdGenerator _guidIdGenerator;
         private readonly IDateTimeProvider _dateTimeProvider;
         public RegisterCommandHandler(
         UserManager<ApplicationUser> userManager,
         IJwtTokenService jwtTokenService,
         IOptions<IJwtSettings> jwtSettings,
-        IIdGenerator<Guid> idGenerator,
-        IDateTimeProvider dateTimeProvider)
+        IDateTimeProvider dateTimeProvider,
+        IGuidIdGenerator guidIdGenerator)
         {
             _userManager = userManager;
             _jwtTokenService = jwtTokenService;
             _jwtSettings = jwtSettings.Value;
-            _idGenerator = idGenerator;
             _dateTimeProvider = dateTimeProvider;
+            _guidIdGenerator = guidIdGenerator;
         }
 
         public async Task<ApiResponse<AuthResponseDto>> Handle(RegisterCommand request, CancellationToken cancellationToken)
@@ -44,7 +44,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
                 return ApiResponse<AuthResponseDto>.Failure("ایمیل قبلاً ثبت شده است");
 
             // ایجاد کاربر جدید
-            var user = new ApplicationUser(_idGenerator.GetId(),
+            var user = new ApplicationUser(_guidIdGenerator.GetId(),
                 _dateTimeProvider.GetDateTimeUtcNow(),
                 request.Request.UserName,
                 request.Request.Email,

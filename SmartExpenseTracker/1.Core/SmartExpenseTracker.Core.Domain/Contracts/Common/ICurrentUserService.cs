@@ -1,4 +1,5 @@
-﻿using SmartExpenseTracker.Core.Domain.Enums.Users;
+﻿using SmartExpenseTracker.Core.Domain.DomainModels.Users;
+using SmartExpenseTracker.Core.Domain.Enums.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace SmartExpenseTracker.Core.Domain.Contracts.Common
 {
     public interface ICurrentUserService
     {
-        string? UserId { get; }
+        CurrentUser GetCurrentUser(CancellationToken cancellationToken);
+        Guid? UserId { get; }
 
         string? UserName { get; }
 

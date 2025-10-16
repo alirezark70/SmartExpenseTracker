@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Infra.IdGenerators
 {
-    public sealed class SnowflakeIdGenerator(IdGenerator generator) : Core.ApplicationService.Contracts.IIdGenerator<long>
+    public sealed class SnowflakeLongIdGenerator(IdGenerator generator) : Core.ApplicationService.Contracts.ILongIdGenerator
     {
         private readonly IdGenerator _generator = generator;
         public long GetId()

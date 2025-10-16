@@ -15,7 +15,8 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
                                                                          int idGeneratorId)
         {
             services.AddIdGen(idGeneratorId);
-            services.AddSingleton<Core.ApplicationService.Contracts.IIdGenerator<long>, SnowflakeIdGenerator>();
+            services.AddSingleton<Core.ApplicationService.Contracts.ILongIdGenerator, SnowflakeLongIdGenerator>();
+            services.AddSingleton<Core.ApplicationService.Contracts.IGuidIdGenerator, SnowflakeGuidIdGenerator>();
             return services;
         }
     }

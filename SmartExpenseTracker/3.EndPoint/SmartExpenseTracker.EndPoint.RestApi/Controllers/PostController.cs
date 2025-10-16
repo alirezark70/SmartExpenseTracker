@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.ExternalServices.Posts;
 using SmartExpenseTracker.Core.ApplicationService.Dtos.Posts;
@@ -10,14 +11,11 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers
    
     public class PostController : BaseApiController
     {
-        private readonly ILogger<PostController> _logger;
-        private readonly IMappingService _mappingService;
+        
         private readonly IPostInquiryService _postInquiryService;
 
-        public PostController(ILogger<PostController> logger, IMappingService mappingService, IPostInquiryService postInquiryService)
+        public PostController(ILogger<PostController> logger, IMappingService mappingService,IMediator mediator, IPostInquiryService postInquiryService) :base(logger,mappingService, mediator)
         {
-            _logger = logger;
-            _mappingService = mappingService;
             _postInquiryService = postInquiryService;
         }
 

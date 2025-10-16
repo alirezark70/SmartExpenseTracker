@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -32,6 +33,11 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
         {
             services.AddSingleton<IJwtSettings, JwtSettings>();
 
+            services.AddDbContext<WriteDbContext>(options =>
+            {
+                options.UseSqlServer("connectionString");
+            });
+
             services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
             {
                 // تنظیمات رمز عبور
@@ -49,6 +55,8 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
                 options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.AllowedForNewUsers = true;
             }) .AddEntityFrameworkStores<WriteDbContext>().AddDefaultTokenProviders();
+
+
 
 
             IConfigurationSection jwtSetting = configuration.GetSection(JwtSettings.SectionName);

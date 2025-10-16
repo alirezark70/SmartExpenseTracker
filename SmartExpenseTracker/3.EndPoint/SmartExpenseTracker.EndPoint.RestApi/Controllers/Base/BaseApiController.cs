@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using SmartExpenseTracker.Core.Domain.Enums.Response;
 using SmartExpenseTracker.EndPoint.RestApi.Filters;
+using SmartExpenseTracker.Infra.Mapping.Contracts;
 
 namespace SmartExpenseTracker.EndPoint.RestApi.Controllers.Base
 {
@@ -12,7 +14,15 @@ namespace SmartExpenseTracker.EndPoint.RestApi.Controllers.Base
     [ApiResponseActionFilter]
     public class BaseApiController : ControllerBase
     {
-
+        protected readonly ILogger<PostController> _logger;
+        protected readonly IMappingService _mappingService;
+        protected readonly IMediator _mediator;
+        public BaseApiController(ILogger<PostController> logger, IMappingService mappingService, IMediator mediator)
+        {
+            _logger = logger;
+            _mappingService = mappingService;
+            _mediator = mediator;
+        }
         protected IActionResult OkResponse<T>(T data, string message = "عملیات با موفقیت انجام شد")
         {
             return Ok(ApiResponse<T>.Success(data, message));

@@ -22,7 +22,7 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             services.AddControllers(options =>
             {
                 options.Filters.Add<ApiResponseActionFilter>();
-                options.Filters.Add<GlobalExceptionFilter>();
+               // options.Filters.Add<GlobalExceptionFilter>();
             });
 
             // Configure API Behavior Options
@@ -73,6 +73,14 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
         {
 
             app.UseMiddleware<ResponseWrapperMiddleware>();
+
+            return app;
+        }
+
+        public static IApplicationBuilder UseGlobalException(this IApplicationBuilder app)
+        {
+
+            app.UseMiddleware<GlobalExceptionMiddleware>();
 
             return app;
         }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Core.ApplicationService.Contracts
 {
-    public interface IIdGenerator<T> where T : struct
+
+    public interface IGuidIdGenerator
     {
-        T GetId();
+        Guid GetId();
     }
 }

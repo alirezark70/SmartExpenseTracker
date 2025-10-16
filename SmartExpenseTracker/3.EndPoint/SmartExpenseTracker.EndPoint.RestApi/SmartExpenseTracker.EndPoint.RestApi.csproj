@@ -28,6 +28,7 @@
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.infra.ExternalServices\SmartExpenseTracker.Infra.ExternalServices.csproj" />
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.infra.IdGenerators\SmartExpenseTracker.Infra.IdGenerators.csproj" />
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.Infra.Mapping\SmartExpenseTracker.Infra.Mapping.csproj" />
+    <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.Infra.Persistence\SmartExpenseTracker.Infra.Persistence.csproj" />
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.infra.Resilience\SmartExpenseTracker.Infra.Resilience.csproj" />
     <ProjectReference Include="..\..\2.Infra\SmartExpenseTracker.infra.SimpleDateTime\SmartExpenseTracker.Infra.SimpleDateTime.csproj" />
   </ItemGroup>

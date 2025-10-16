@@ -4,7 +4,8 @@ using SmartExpenseTracker.Core.Extensions.DependencyInjection;
 using SmartExpenseTracker.Extensions.DependencyInjection;
 using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Filters;
-
+using SmartExpenseTracker.EndPoint.RestApi.Middleware;
+using SmartExpenseTracker.Infra.Persistence.Context;
 namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 {
     public static class HostingExtensions
@@ -65,6 +66,8 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
                 });
             });
 
+            // Add HttpContextAccessor
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", builder =>
@@ -77,11 +80,12 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 
 
             builder.Services.AddOpenApi();
-            //builder.Services.AddDbContext<HouseRentDbContext>(options =>
-            //{
-            //    options.UseSqlServer(connectionString);
-            //});
+            
 
+            //Add Persistence
+            builder.Services.RegisterPersistenceService(builder.Configuration);
+
+            //Add Resilience
             builder.Services.RegisterResilienceService(builder.Configuration);
 
             //Add Id Generator Services
@@ -121,6 +125,7 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseGlobalException(); // Global Exception Handleing
             app.UseResponseFramework(); // Optional middleware
             app.MapControllers();
 
