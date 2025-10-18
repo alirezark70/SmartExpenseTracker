@@ -19,17 +19,27 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
 
         public Guid Id { get; private set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; private set; }
 
-        public string? CreatedBy { get; set; }
+        public Guid? CreatedBy { get; private set; }
 
-        public DateTime? ModifiedAt { get; set; }
+        public DateTime? ModifiedAt { get; private set; }
 
-        public string? ModifiedBy { get; set; }
+        public Guid? ModifiedBy { get; private set; }
 
         public bool IsDeleted  { get;private set; }
 
-        
+        public void SoftDelete(DateTime modifiedAt, Guid? modifiedBy)
+        {
+            IsDeleted = true;
+            Touch(modifiedAt, modifiedBy);
+        }
+
+        public void Touch(DateTime modifieddAt, Guid? modifieddBy)
+        {
+            ModifiedAt = modifieddAt;
+            ModifiedBy = modifieddBy;
+        }
         public void AddDomainEvent(IDomainEvent domainEvent)
         {
             _domainEvents.Add(domainEvent); 

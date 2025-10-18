@@ -23,9 +23,9 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
         // Status & Activity
         public bool IsActive { get; private set; } = true;
         public DateTime CreatedAt { get;  set; }
-        public string? CreatedBy { get;  set; }
+        public Guid? CreatedBy { get;  set; }
         public DateTime? ModifiedAt { get;  set; }
-        public string? ModifiedBy { get;  set; }
+        public Guid? ModifiedBy { get;  set; }
         public DateTime? LastLoginAt { get; private set; }
         public string? LastLoginIp { get; private set; }
         public int FailedLoginAttempts { get; private set; }
@@ -53,7 +53,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
         public virtual ICollection<UserActivity> Activities { get; private set; }
             = new HashSet<UserActivity>();
         
-        public bool IsDeleted { get;  set; }
+        public bool IsDeleted { get; private set; }
 
         // Constructor
         private ApplicationUser() { } // For EF Core
@@ -185,11 +185,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             _domainEvents.Clear();
         }
 
-        public void MarkAsDeleted(DateTime modifiedAt)
-        {
-            IsDeleted = true;
-            ModifiedAt = modifiedAt;
-        }
+        
     }
 
 }

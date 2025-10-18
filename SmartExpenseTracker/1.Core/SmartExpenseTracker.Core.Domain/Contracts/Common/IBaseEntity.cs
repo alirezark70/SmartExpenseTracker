@@ -9,17 +9,18 @@ namespace SmartExpenseTracker.Core.Domain.Contracts.Common
 {
     public interface IBaseEntity
     {
-        Guid Id { get;  }
-        DateTime CreatedAt { get; set; }
-        string? CreatedBy { get; set; }
-        DateTime? ModifiedAt { get; set; }
-        string? ModifiedBy { get;  }
-        bool IsDeleted { get; }
+        Guid Id { get;}
+        DateTime CreatedAt { get;}
+        Guid? CreatedBy { get;}
+        DateTime? ModifiedAt { get;}
+        Guid? ModifiedBy { get;}
+        bool IsDeleted { get;}
+
         IReadOnlyList<IDomainEvent> DomainEvents { get; }
 
         void AddDomainEvent(IDomainEvent domainEvent);
         void RemoveDomainEvent(IDomainEvent domainEvent);
         void ClearDomainEvents();
-        void MarkAsDeleted(DateTime modifiedAt);
+
     }
 }

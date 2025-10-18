@@ -59,32 +59,28 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             _spent = new Money(_spent.Value + amount.Value, _spent.Currency);
 
             CheckBudgetAlerts(budgetThresholdReachedEventId, occurredOn);
-            SetUpdateTime(CreatedAt);
         }
 
         public void ResetSpent()
         {
             _spent = Money.Zero(_limit.Currency);
-            SetUpdateTime(CreatedAt);
+
         }
 
         public void UpdateLimit(Money newLimit, Guid budgetThresholdReachedEventId, DateTime occurredOn)
         {
             SetLimit(newLimit);
             CheckBudgetAlerts(budgetThresholdReachedEventId, occurredOn);
-            SetUpdateTime(CreatedAt);
         }
 
         public void Deactivate()
         {
             _isActive = false;
-            SetUpdateTime(CreatedAt);
         }
 
         public void Activate()
         {
             _isActive = true;
-            SetUpdateTime(CreatedAt);
         }
 
         public void AddAlert(decimal thresholdPercentage,Guid budgetAlertId,DateTime createdAt)
@@ -97,7 +93,6 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             if (!_alerts.Any(a => a.ThresholdPercentage == thresholdPercentage))
             {
                 _alerts.Add(alert);
-                SetUpdateTime(CreatedAt);
             }
         }
 
@@ -131,5 +126,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Budgets
             if (limit.Value <= 0)
                 throw new ArgumentException("Budget limit must be greater than zero");
         }
+
+       
     }
 }

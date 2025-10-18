@@ -18,11 +18,11 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
         private readonly List<IDomainEvent> _domainEvents = new();
         public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
         public string? Description { get;private set; }
-        public DateTime CreatedAt { get; set; } 
+        public DateTime CreatedAt { get; } 
 
-        public string? CreatedBy { get; set; }
-        public DateTime? ModifiedAt { get;  set; }
-        public string? ModifiedBy { get;  set; }
+        public Guid? CreatedBy { get; }
+        public DateTime? ModifiedAt { get; private set; }
+        public Guid? ModifiedBy { get; private set; }
         public bool IsDeleted { get; private set; }
 
         public void AddNewRole(Guid id,string description)
@@ -42,17 +42,22 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
         {
             _domainEvents.Clear();
         }
-
-        public void MarkAsDeleted(DateTime modifiedAt)
-        {
-            IsDeleted = true;
-            ModifiedAt = modifiedAt;
-        }
-
         public void RemoveDomainEvent(IDomainEvent domainEvent)
         {
             _domainEvents.Remove(domainEvent);
 
+        }
+
+        public void SoftDelete(DateTime modifiedAt, Guid? modifiedBy)
+        {
+            IsDeleted = true;
+            Touch(modifiedAt, modifiedBy);
+        }
+
+        public void Touch(DateTime modifieddAt, Guid? modifieddBy)
+        {
+            ModifiedAt = modifieddAt;
+            ModifiedBy = modifieddBy;
         }
     }
 }

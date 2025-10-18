@@ -41,36 +41,30 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
         public void UpdateAmount(Money newAmount)
         {
             SetAmount(newAmount);
-            SetUpdateTime(_createdAt);
             AddDomainEvent(new ExpenseUpdatedEvent(Id, newAmount));
         }
 
         public void UpdateDescription(string description)
         {
             SetDescription(description);
-            SetUpdateTime(_createdAt);
         }
 
         public void UpdateCategory(ExpenseCategory category)
         {
             _category = category;
-            SetUpdateTime(_createdAt);
         }
         public void AddTag(Tag tag)
         {
             if (!_tags.Contains(tag))
             {
                 _tags.Add(tag);
-                SetUpdateTime(_createdAt);
             }
         }
 
         public void RemoveTag(Tag tag)
         {
-            if (_tags.Remove(tag))
-            {
-                SetUpdateTime(_createdAt);
-            }
+            _tags.Remove(tag);
+            
         }
 
         public void SetReceipt(string receiptUrl)
@@ -79,27 +73,23 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
                 throw new ArgumentException("Receipt URL cannot be empty");
 
             _receiptUrl = receiptUrl;
-            SetUpdateTime(_createdAt);
         }
 
         public void SetLocation(Location location)
         {
             _location = location ?? throw new ArgumentNullException(nameof(location));
-            SetUpdateTime(_createdAt);
         }
 
         public void MakeRecurring(RecurrencePattern pattern)
         {
             _recurrencePattern = pattern ?? throw new ArgumentNullException(nameof(pattern));
             _isRecurring = true;
-            SetUpdateTime(_createdAt);
         }
 
         public void StopRecurring()
         {
             _isRecurring = false;
             _recurrencePattern = null;
-            SetUpdateTime(_createdAt);
         }
 
         private void SetAmount(Money amount)

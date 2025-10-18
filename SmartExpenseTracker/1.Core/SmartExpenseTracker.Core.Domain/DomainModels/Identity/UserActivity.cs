@@ -26,7 +26,6 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             string? ipAddress = null,
             string? metaData = null) :base(id)
         {
-            Id = id;
             UserId = userId;
             ActivityType = activityType;
             Description = description;

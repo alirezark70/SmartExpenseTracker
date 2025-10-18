@@ -10,26 +10,32 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Common
 {
     public abstract class BaseEntity : IBaseEntity
     {
+        private DateTime _createdAt;
+        private Guid? _createdBy;
+        private DateTime? _modifiedAt;
+        private Guid? _modifiedBy;
+        private bool _isDeleted;
+
         private readonly List<IDomainEvent> _domainEvents = new();
         public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
-        public Guid Id { get; protected set; }
+        public Guid Id { get; private set; }
 
-        public DateTime CreatedAt { get;  set; }
+        public DateTime CreatedAt => _createdAt;
 
-        public string? CreatedBy { get;  set; }
+        public Guid? CreatedBy => _createdBy;
 
-        public DateTime? ModifiedAt { get;  set; }
+        public DateTime? ModifiedAt => _modifiedAt;
 
-        public string? ModifiedBy { get;  set; }
+        public Guid? ModifiedBy => _modifiedBy;
 
-        public bool IsDeleted { get; protected set; }
+        public bool IsDeleted => _isDeleted;
 
         protected BaseEntity(Guid id)
         {
             Id = id;
         }
-
+     
 
         //برای اینکه در 
         //ef core
@@ -54,16 +60,6 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Common
             _domainEvents.Clear();
         }
 
-        public void MarkAsDeleted(DateTime modifiedAt)
-        {
-            IsDeleted = true;
-            ModifiedAt = modifiedAt;
-        }
-
-        protected void SetUpdateTime(DateTime modifiedAt)
-        {
-            ModifiedAt = modifiedAt;
-        }
-
+        
     }
 }

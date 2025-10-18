@@ -137,7 +137,6 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             try
             {
                 // Update audit fields
-                UpdateAuditableEntities();
 
                 // Get domain events before saving
                 var domainEvents = GetDomainEvents();
@@ -163,7 +162,6 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
 
         public async Task<int> SaveChangesAsync(string userId, CancellationToken cancellationToken = default)
         {
-            UpdateAuditableEntities(userId);
             return await SaveChangesAsync(cancellationToken);
         }
 
@@ -262,26 +260,7 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
       
 
 
-        private void UpdateAuditableEntities(string? userId = null)
-        {
-            var entries = _context.ChangeTracker
-            .Entries<BaseEntity>() 
-            .Where(e => e.State is EntityState.Added or EntityState.Modified)
-            .ToList();
-
-            foreach (var entry in entries)
-            {
-                if (entry.State == EntityState.Added)
-                {
-                    entry.Entity.CreatedAt = _dateTimeProvider.GetDateTimeUtcNow();
-                    entry.Entity.CreatedBy = userId;
-                }
-
-                entry.Entity.ModifiedAt = _dateTimeProvider.GetDateTimeUtcNow();
-                entry.Entity.ModifiedBy = userId;
-            }
-        }
-
+    
         private List<IDomainEvent> GetDomainEvents()
         {
             return _context.ChangeTracker

@@ -26,7 +26,6 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Identity
             bool isSuccessful,
             string? failureReason = null) :base(id)
         {
-            Id = id;
             UserId = userId;
             IpAddress = ipAddress;
             UserAgent = userAgent;
