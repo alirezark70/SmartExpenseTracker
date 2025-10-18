@@ -22,7 +22,19 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public Guid? UserId => Guid.TryParse( _httpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value, out Guid userIdGuid)?userIdGuid:Guid.Empty;
+        public Guid? UserId 
+        {
+            get
+            {
+                var userIdClaim = _httpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userIdClaim))
+                    return null;
+
+                return Guid.TryParse(userIdClaim, out var userId) ? userId : null;
+            }
+                
+                
+         }
 
         public string? UserName => _httpContext?.User?.Identity?.Name;
 
