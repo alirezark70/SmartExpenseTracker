@@ -18,7 +18,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.Contracts.Base
         IRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity;
 
         // Specialized Repositories
-        //IUserRepository UserRepository { get; }
+        IUserRepository UserRepository { get; }
 
 
         // Transaction Management without parameter

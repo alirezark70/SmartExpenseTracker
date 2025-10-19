@@ -24,6 +24,12 @@ namespace SmartExpenseTracker.Infra.Persistence.EntityConfigurations
             builder.Property(h => h.UserAgent)
                 .HasMaxLength(500);
 
+            builder.Property(h => h.LoginTime)
+                .IsRequired();
+
+            builder.Property(h => h.IsSuccessful)
+                .IsRequired();
+
             builder.Property(h => h.FailureReason)
                 .HasMaxLength(200);
 
@@ -34,6 +40,9 @@ namespace SmartExpenseTracker.Infra.Persistence.EntityConfigurations
             builder.HasIndex(h => h.LoginTime)
                 .HasDatabaseName("IX_UserLoginHistories_LoginTime");
 
+            builder.HasIndex(h => h.IsSuccessful)
+                .HasDatabaseName("IX_UserLoginHistories_IsSuccessful");
+
             builder.HasIndex(h => new { h.UserId, h.LoginTime })
                 .HasDatabaseName("IX_UserLoginHistories_UserLogin");
 
@@ -42,6 +51,9 @@ namespace SmartExpenseTracker.Infra.Persistence.EntityConfigurations
                 .WithMany(u => u.LoginHistories)
                 .HasForeignKey(h => h.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // Query Filters
+            builder.HasQueryFilter(h => !h.IsDeleted);
         }
     }
 }

@@ -19,11 +19,15 @@
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.9\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.9\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.telemetry.abstractions\9.9.0\buildTransitive\net8.0\Microsoft.Extensions.Telemetry.Abstractions.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.telemetry.abstractions\9.9.0\buildTransitive\net8.0\Microsoft.Extensions.Telemetry.Abstractions.props')" />
     <Import Project="$(NuGetPackageRoot)entityframework\6.5.1\buildTransitive\net6.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.5.1\buildTransitive\net6.0\EntityFramework.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.4\buildTransitive\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers\3.3.4\buildTransitive\Microsoft.CodeAnalysis.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\9.0.9\build\net8.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\9.0.9\build\net8.0\Microsoft.EntityFrameworkCore.Design.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.visualstudio.azure.containers.tools.targets\1.22.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.visualstudio.azure.containers.tools.targets\1.22.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\email\.nuget\packages\microsoft.extensions.apidescription.server\9.0.0</PkgMicrosoft_Extensions_ApiDescription_Server>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\email\.nuget\packages\entityframework\6.5.1</PkgEntityFramework>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\email\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.4</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\email\.nuget\packages\microsoft.entityframeworkcore.tools\9.0.9</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets Condition=" '$(PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets)' == '' ">C:\Users\email\.nuget\packages\microsoft.visualstudio.azure.containers.tools.targets\1.22.1</PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets>
   </PropertyGroup>
 </Project>

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using SmartExpenseTracker.Core.ApplicationService.Commands.Identity;
 using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Mediator;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Users;
 using SmartExpenseTracker.Core.ApplicationService.Dtos.Identity;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
 using SmartExpenseTracker.Core.Domain.DomainModels.Identity;
@@ -11,30 +13,34 @@ using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using SmartExpenseTracker.Core.Domain.Enums.Users;
 namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
 {
-    public class RegisterCommandHandler : ICommandHandler<RegisterCommand, ApiResponse<AuthResponseDto>>
+    public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ApiResponse<AuthResponseDto>>
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IJwtTokenService _jwtTokenService;
         private readonly IJwtSettings _jwtSettings;
         private readonly IGuidIdGenerator _guidIdGenerator;
         private readonly IDateTimeProvider _dateTimeProvider;
+        private readonly IUserRepository _userRepository;
+
         public RegisterCommandHandler(
-        UserManager<ApplicationUser> userManager,
-        IJwtTokenService jwtTokenService,
-        IOptions<IJwtSettings> jwtSettings,
-        IDateTimeProvider dateTimeProvider,
-        IGuidIdGenerator guidIdGenerator)
+            UserManager<ApplicationUser> userManager,
+            IJwtTokenService jwtTokenService,
+            IOptions<IJwtSettings> jwtSettings,
+            IDateTimeProvider dateTimeProvider,
+            IGuidIdGenerator guidIdGenerator,
+            IUserRepository userRepository)
         {
             _userManager = userManager;
             _jwtTokenService = jwtTokenService;
             _jwtSettings = jwtSettings.Value;
             _dateTimeProvider = dateTimeProvider;
             _guidIdGenerator = guidIdGenerator;
+            _userRepository = userRepository;
         }
 
         public async Task<ApiResponse<AuthResponseDto>> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
-            // بررسی وجود کاربر
+            // Check for existing user
             var existingUser = await _userManager.FindByNameAsync(request.Request.UserName);
             if (existingUser != null)
                 return ApiResponse<AuthResponseDto>.Failure("نام کاربری قبلاً ثبت شده است");
@@ -43,8 +49,9 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             if (existingEmail != null)
                 return ApiResponse<AuthResponseDto>.Failure("ایمیل قبلاً ثبت شده است");
 
-            // ایجاد کاربر جدید
-            var user = new ApplicationUser(_guidIdGenerator.GetId(),
+            // Create new user
+            var user = new ApplicationUser(
+                _guidIdGenerator.GetId(),
                 _dateTimeProvider.GetDateTimeUtcNow(),
                 request.Request.UserName,
                 request.Request.Email,
@@ -60,23 +67,34 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
                 return ApiResponse<AuthResponseDto>.Failure($"خطا در ثبت ‌نام: {errors}");
             }
 
-            // اختصاص نقش پیش‌فرض
+            // Assign default role
             await _userManager.AddToRoleAsync(user, RoleType.User.ToString());
 
-            // تولید توکن
+            // Generate tokens
             var roles = await _userManager.GetRolesAsync(user);
-
             var rolesEnum = roles
                 .Select(r => Enum.TryParse<RoleType>(r, out var role) ? role : (RoleType?)null)
                 .Where(r => r.HasValue)
                 .Select(r => r.Value)
                 .ToList();
+
             var accessToken = await _jwtTokenService.GenerateAccessTokenAsync(user, rolesEnum);
             var refreshToken = _jwtTokenService.GenerateRefreshToken();
 
-            // ذخیره Refresh Token
-            user.SetRefreshToken(_dateTimeProvider.GetDateTimeUtcNow(), refreshToken, 1);
+            // Save Refresh Token
+            user.SetRefreshToken(_dateTimeProvider.GetDateTimeUtcNow(), refreshToken, _jwtSettings.RefreshTokenExpirationDays);
             await _userManager.UpdateAsync(user);
+
+            // Log user activity
+            var activity = new UserActivity(
+                _guidIdGenerator.GetId(),
+                user.Id,
+                "Registration",
+                "New user registered",
+                GetIpAddress(),
+                null);
+
+            await _userRepository.AddUserActivityAsync(activity, cancellationToken);
 
             var response = new AuthResponseDto
             {
@@ -92,6 +110,12 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
             };
 
             return ApiResponse<AuthResponseDto>.Success(response);
+        }
+
+        private string? GetIpAddress()
+        {
+            // This should be injected from HttpContext
+            return "127.0.0.1";
         }
     }
 }

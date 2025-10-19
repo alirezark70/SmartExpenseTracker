@@ -1,4 +1,11 @@
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.csproj.AssemblyReference.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.AssemblyInfoInputs.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.AssemblyInfo.cs
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.sourcelink.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.deps.json
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.runtimeconfig.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Core.ApplicationService.dll
@@ -7,14 +14,9 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Core.ApplicationService.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Core.Domain.pdb
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\bin\Debug\net9.0\SmartExpenseTracker.Infra.Mapping.pdb
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.csproj.AssemblyReference.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.AssemblyInfoInputs.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.AssemblyInfo.cs
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.csproj.CoreCompileInputs.cache
-C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.sourcelink.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExp.F7B23A79.Up2Date
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\refint\SmartExpenseTracker.Infra.Persistence.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.pdb
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\SmartExpenseTracker.Infra.Persistence.genruntimeconfig.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\2.Infra\SmartExpenseTracker.Infra.Persistence\obj\Debug\net9.0\ref\SmartExpenseTracker.Infra.Persistence.dll

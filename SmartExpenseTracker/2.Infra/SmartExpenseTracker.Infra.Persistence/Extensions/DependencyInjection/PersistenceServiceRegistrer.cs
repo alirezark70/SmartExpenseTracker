@@ -1,7 +1,5 @@
 ﻿using MapsterMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,11 +17,6 @@ using SmartExpenseTracker.Infra.Persistence.Context;
 using SmartExpenseTracker.Infra.Persistence.Repositories.Users;
 using SmartExpenseTracker.Infra.Persistence.Services.Base;
 using SmartExpenseTracker.Infra.Persistence.Services.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
 {
@@ -82,67 +75,7 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
                 .AddDefaultTokenProviders()
                 .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>("Default");
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
-                options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
-                options.AddPolicy("AdminOrUser", policy => policy.RequireRole("Admin", "User"));
-            });
-
-
-            // JWT Authentication
-            var jwtSettings = configuration.GetSection(JwtSettings.SectionName).Get<JwtSettings>();
-
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.RequireHttpsMetadata = false; // در Production باید true باشد
-                options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtSettings!.Issuer,
-                    ValidAudience = jwtSettings.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey)),
-                    ClockSkew = TimeSpan.Zero,
-                    LifetimeValidator = (notBefore, expires, token, parameters) =>
-                    {
-                        return expires != null && expires > DateTime.UtcNow;
-                    }
-                };
-
-                // Event handlers
-                options.Events = new JwtBearerEvents
-                {
-                    OnAuthenticationFailed = context =>
-                    {
-                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                        {
-                            context.Response.Headers.Add("IS-TOKEN-EXPIRED", "true");
-                        }
-                        return Task.CompletedTask;
-                    },
-                    OnMessageReceived = context =>
-                    {
-                        // برای SignalR
-                        var accessToken = context.Request.Query["access_token"];
-                        var path = context.HttpContext.Request.Path;
-                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs"))
-                        {
-                            context.Token = accessToken;
-                        }
-                        return Task.CompletedTask;
-                    }
-                };
-            });
+         
 
             services.AddScoped(typeof(IRepository<>), typeof(EfCoreRepository<>));
             services.AddScoped<IJwtTokenService, JwtTokenService>();

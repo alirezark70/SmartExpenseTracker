@@ -15,6 +15,15 @@
     <PackageReference Include="App.Metrics.AspNetCore.Tracking" Version="4.3.0" />
     <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.3.0" />
     <PackageReference Include="App.Metrics.Extensions.Hosting" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
@@ -23,6 +32,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\1.Core\SmartExpenseTracker.Core.ApplicationService\SmartExpenseTracker.Core.ApplicationService.csproj" />

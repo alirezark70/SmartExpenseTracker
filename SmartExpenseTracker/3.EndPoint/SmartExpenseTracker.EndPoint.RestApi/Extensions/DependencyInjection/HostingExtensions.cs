@@ -1,4 +1,6 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
@@ -6,8 +8,11 @@ using SmartExpenseTracker.Core.Extensions.DependencyInjection;
 using SmartExpenseTracker.EndPoint.RestApi.Middleware;
 using SmartExpenseTracker.Extensions.DependencyInjection;
 using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
+using SmartExpenseTracker.Infra.Persistence.Configuration;
 using SmartExpenseTracker.Infra.Persistence.Context;
 using Swashbuckle.AspNetCore.Filters;
+using System.Configuration;
+using System.Text;
 namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 {
     public static class HostingExtensions
@@ -68,6 +73,9 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
                 });
             });
 
+
+
+
             // Add HttpContextAccessor
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddCors(options =>
@@ -99,7 +107,69 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             });
 
             builder.Services.AddOpenApi();
-            
+
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+                options.AddPolicy("AdminOrUser", policy => policy.RequireRole("Admin", "User"));
+            });
+
+
+            // JWT Authentication
+            var jwtSettings = builder.Configuration.GetSection(JwtSettings.SectionName).Get<JwtSettings>();
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false; // در Production باید true باشد
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings!.Issuer,
+                    ValidAudience = jwtSettings.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey)),
+                    ClockSkew = TimeSpan.Zero,
+                    LifetimeValidator = (notBefore, expires, token, parameters) =>
+                    {
+                        return expires != null && expires > DateTime.UtcNow;
+                    }
+                };
+
+                // Event handlers
+                options.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                        {
+                            context.Response.Headers.Add("IS-TOKEN-EXPIRED", "true");
+                        }
+                        return Task.CompletedTask;
+                    },
+                    OnMessageReceived = context =>
+                    {
+                        // برای SignalR
+                        var accessToken = context.Request.Query["access_token"];
+                        var path = context.HttpContext.Request.Path;
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs"))
+                        {
+                            context.Token = accessToken;
+                        }
+                        return Task.CompletedTask;
+                    }
+                };
+            });
 
             //Add Persistence
             builder.Services.RegisterPersistenceService(builder.Configuration);
