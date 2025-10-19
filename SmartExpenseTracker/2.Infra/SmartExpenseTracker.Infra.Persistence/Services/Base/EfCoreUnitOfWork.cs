@@ -4,6 +4,8 @@ using Microsoft.Extensions.Logging;
 using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Budgets;
+using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Expenses;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence.Users;
 using SmartExpenseTracker.Core.ApplicationService.Exceptions;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
@@ -26,12 +28,15 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
         private IDbContextTransaction? _currentTransaction; 
         // Specialized Repositories
         private IUserRepository? _userRepository;
-
+        //private IExpenseRepository? _expenseRepository;
+        //private IBudgetRepository? _budgetRepository;
         public EfCoreUnitOfWork(
             WriteDbContext context,
             ILogger<EfCoreUnitOfWork> logger,
             IDateTimeProvider dateTimeProvider,
-            IUserRepository? userRepository)
+            IUserRepository? userRepository
+            //IExpenseRepository? expenseRepository,
+            )
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -39,21 +44,23 @@ namespace SmartExpenseTracker.Infra.Persistence.Services.Base
             _repositories = new Dictionary<Type, object>();
             _transactions = new List<IDbContextTransaction>();
             _userRepository = userRepository;
+            //_expenseRepository = expenseRepository;
+            //_budgetRepository = budgetRepository;
         }
 
         public bool HasActiveTransaction => _transactions.Any();
 
-        public IUserRepository UserRepository
-        {
-            get
-            {
-                if (_userRepository == null)
-                {
-                    _userRepository = new UserRepository(_context);
-                }
-                return _userRepository;
-            }
-        }
+        public IUserRepository UserRepository =>
+        _userRepository ??= new UserRepository(_context);
+
+
+        //public IExpenseRepository ExpenseRepository =>
+        //    _expenseRepository ??= new ExpenseRepository(_context);
+
+        //public IBudgetRepository BudgetRepository =>
+        //    _budgetRepository ??= new BudgetRepository(_context);
+
+
 
         public IRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {

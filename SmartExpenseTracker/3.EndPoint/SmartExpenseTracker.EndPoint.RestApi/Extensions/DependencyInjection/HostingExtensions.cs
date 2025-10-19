@@ -1,11 +1,13 @@
 ﻿using Microsoft.OpenApi.Models;
+using Serilog;
+using Serilog.Events;
 using SmartExpenseTracker.Core.Domain.DomainModels.Response.Entities;
 using SmartExpenseTracker.Core.Extensions.DependencyInjection;
+using SmartExpenseTracker.EndPoint.RestApi.Middleware;
 using SmartExpenseTracker.Extensions.DependencyInjection;
 using SmartExpenseTracker.Infra.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Filters;
-using SmartExpenseTracker.EndPoint.RestApi.Middleware;
 using SmartExpenseTracker.Infra.Persistence.Context;
+using Swashbuckle.AspNetCore.Filters;
 namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
 {
     public static class HostingExtensions
@@ -78,6 +80,23 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
                 });
             });
 
+            builder.Logging.ClearProviders();
+
+            builder.Host.UseSerilog((context, services, configuration) =>
+            {
+                configuration
+                    .MinimumLevel.Debug()
+                    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                    .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
+                    .MinimumLevel.Override("System", LogEventLevel.Warning)
+                    .Enrich.FromLogContext()
+                    .WriteTo.Console(
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} {Properties:j}{NewLine}{Exception}")
+                    .WriteTo.Seq(
+                        serverUrl: "http://localhost:5341",
+                        restrictedToMinimumLevel: LogEventLevel.Verbose)
+                    .ReadFrom.Configuration(context.Configuration);
+            });
 
             builder.Services.AddOpenApi();
             
@@ -121,6 +140,17 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseSerilogRequestLogging(options =>
+            {
+                options.MessageTemplate = "HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms";
+                options.EnrichDiagnosticContext = (diagnosticContext, httpContext) =>
+                {
+                    diagnosticContext.Set("RequestHost", httpContext.Request.Host.Value);
+                    diagnosticContext.Set("RequestScheme", httpContext.Request.Scheme);
+                    diagnosticContext.Set("RemoteIpAddress", httpContext.Connection.RemoteIpAddress);
+                };
+            });
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseAuthentication();
@@ -134,6 +164,8 @@ namespace SmartExpenseTracker.EndPoint.Extensions.DependencyInjection
             app.MapControllers();
 
             app.UseMetericsMiddleware();
+
+            Log.Information("Application Starting...");
             return app;
         }
     }

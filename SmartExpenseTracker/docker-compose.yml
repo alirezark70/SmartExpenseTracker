@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # SQL Server Database
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: smartexpenseMain_sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=VIANb1sdvA3UkJbCjhM5BzK64eO9n3EmDrgSnTCTvP802suNsh
+      - MSSQL_PID=Developer
+    ports:
+      - "1434:1433" 
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - smartexpense_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P VIANb1sdvA3UkJbCjhM5BzK64eO9n3EmDrgSnTCTvP802suNsh -Q 'SELECT 1' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  seq:
+    image: datalust/seq:latest
+    container_name: smartexpense_seq
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_FIRSTRUN_NOAUTHENTICATION=true
+    ports:
+      - "5341:80"
+      - "5342:5341"
+    volumes:
+      - seq_data:/data
+    networks:
+      - smartexpense_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+
+volumes:
+  sqlserver_data:
+  seq_data: 
+networks:
+  smartexpense_network:
+    driver: bridge

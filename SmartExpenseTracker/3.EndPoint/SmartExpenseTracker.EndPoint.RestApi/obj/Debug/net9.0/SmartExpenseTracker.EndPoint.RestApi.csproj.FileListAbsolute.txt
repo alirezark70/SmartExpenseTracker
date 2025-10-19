@@ -93,6 +93,16 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Polly.Extensions.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Polly.RateLimiting.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Scrutor.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Serilog.Sinks.Seq.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll

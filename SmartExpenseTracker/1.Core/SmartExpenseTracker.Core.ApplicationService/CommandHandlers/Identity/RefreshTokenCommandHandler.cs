@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,7 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
         private readonly IJwtTokenService _jwtTokenService;
         private readonly IJwtSettings _jwtSettings;
         private readonly IDateTimeProvider _dateTimeProvider;
+
         public RefreshTokenCommandHandler(
             UserManager<ApplicationUser> userManager,
             IJwtTokenService jwtTokenService,
@@ -38,26 +40,38 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
 
         public async Task<ApiResponse<AuthResponseDto>> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
         {
+            // بررسی توکن منقضی شده
             var principal = _jwtTokenService.GetPrincipalFromExpiredToken(request.Request.AccessToken);
-
             if (principal == null)
-                return ApiResponse<AuthResponseDto>.Failure("توکن نامعتبر است");
+            {
+                return ApiResponse<AuthResponseDto>.Failure("توکن نامعتبر است", Domain.Enums.Response.ResponseStatus.Unauthorized);
+            }
 
-            var userIdClaim = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out var userId))
-                return ApiResponse<AuthResponseDto>.Failure("توکن نامعتبر است");
+            var userId = principal.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return ApiResponse<AuthResponseDto>.Failure("توکن نامعتبر است", Domain.Enums.Response.ResponseStatus.Unauthorized);
+            }
 
-            var user = await _userManager.FindByIdAsync(userId.ToString());
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null || !user.IsActive || user.IsDeleted)
+            {
+                return ApiResponse<AuthResponseDto>.Failure("کاربر یافت نشد یا غیرفعال است", Domain.Enums.Response.ResponseStatus.Unauthorized);
+            }
 
-            if (user == null || !user.IsActive)
-                return ApiResponse<AuthResponseDto>.Failure("کاربر یافت نشد یا غیرفعال است");
+            // اعتبارسنجی Refresh Token
+            if (!ValidateRefreshToken(user, request.Request.RefreshToken))
+            {
+                return ApiResponse<AuthResponseDto>.Failure("توکن تازه‌سازی نامعتبر است", Domain.Enums.Response.ResponseStatus.Unauthorized);
+            }
 
-            if (!user.ValidateRefreshToken(_dateTimeProvider.GetDateTimeNow(), request.Request.RefreshToken))
-                return ApiResponse<AuthResponseDto>.Failure("توکن تازه‌سازی نامعتبر است");
+            // بررسی انقضای Refresh Token
+            if (user.RefreshTokenExpiryTime <= _dateTimeProvider.GetDateTimeUtcNow())
+            {
+                return ApiResponse<AuthResponseDto>.Failure("توکن تازه‌سازی منقضی شده است", Domain.Enums.Response.ResponseStatus.Unauthorized);
+            }
 
-            if (user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-                return ApiResponse<AuthResponseDto>.Failure("توکن تازه‌سازی منقضی شده است");
-
+            // دریافت نقش‌ها
             var roles = await _userManager.GetRolesAsync(user);
             var rolesEnum = roles
                 .Select(r => Enum.TryParse<RoleType>(r, out var role) ? role : (RoleType?)null)
@@ -65,17 +79,12 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
                 .Select(r => r.Value)
                 .ToList();
 
-
             // تولید توکن‌های جدید
-            
             var newAccessToken = await _jwtTokenService.GenerateAccessTokenAsync(user, rolesEnum);
             var newRefreshToken = _jwtTokenService.GenerateRefreshToken();
 
-
-
-
-            user.SetRefreshToken(_dateTimeProvider.GetDateTimeNow(), newRefreshToken, _jwtSettings.RefreshTokenExpirationDays);
-            user.SetRefreshTokenExpiryTime(_dateTimeProvider.GetDateTimeNow().AddDays(_jwtSettings.RefreshTokenExpirationDays));
+            // به‌روزرسانی Refresh Token
+            user.SetRefreshToken(_dateTimeProvider.GetDateTimeUtcNow(), newRefreshToken, _jwtSettings.RefreshTokenExpirationDays);
             await _userManager.UpdateAsync(user);
 
             var response = new AuthResponseDto
@@ -87,11 +96,33 @@ namespace SmartExpenseTracker.Core.ApplicationService.CommandHandlers.Identity
                 LastName = user.LastName,
                 AccessToken = newAccessToken,
                 RefreshToken = newRefreshToken,
-                ExpiresAt = _dateTimeProvider.GetDateTimeNow().AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
+                ExpiresAt = _dateTimeProvider.GetDateTimeUtcNow().AddMinutes(_jwtSettings.AccessTokenExpirationMinutes),
                 Roles = roles.ToList()
             };
 
             return ApiResponse<AuthResponseDto>.Success(response);
+        }
+
+        private bool ValidateRefreshToken(ApplicationUser user, string refreshToken)
+        {
+            if (string.IsNullOrEmpty(user.RefreshTokenHash) || string.IsNullOrEmpty(user.RefreshTokenSalt))
+                return false;
+
+            try
+            {
+                var salt = Convert.FromBase64String(user.RefreshTokenSalt);
+                using var pbkdf2 = new Rfc2898DeriveBytes(
+                    refreshToken,
+                    salt,
+                    10000,
+                    HashAlgorithmName.SHA256);
+                var computedHash = Convert.ToBase64String(pbkdf2.GetBytes(32));
+                return computedHash == user.RefreshTokenHash;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
