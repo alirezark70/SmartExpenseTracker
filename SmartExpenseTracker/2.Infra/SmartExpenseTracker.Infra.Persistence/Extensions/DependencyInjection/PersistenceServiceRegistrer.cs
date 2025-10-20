@@ -25,9 +25,12 @@ namespace SmartExpenseTracker.Infra.Extensions.DependencyInjection
         public static IServiceCollection RegisterPersistenceService(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<IJwtSettings, JwtSettings>();
+            services.AddScoped<AuditInterceptor>();
 
             services.AddDbContext<WriteDbContext>(options =>
             {
+                
+
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection"),
                     sqlOptions =>

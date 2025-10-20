@@ -10,32 +10,26 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Common
 {
     public abstract class BaseEntity : IBaseEntity
     {
-        private DateTime _createdAt;
-        private Guid? _createdBy;
-        private DateTime? _modifiedAt;
-        private Guid? _modifiedBy;
-        private bool _isDeleted;
 
         private readonly List<IDomainEvent> _domainEvents = new();
         public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
         public Guid Id { get; private set; }
 
-        public DateTime CreatedAt => _createdAt;
+        public DateTime CreatedAt { get; private set; }
 
-        public Guid? CreatedBy => _createdBy;
+        public Guid? CreatedBy { get; private set; }
 
-        public DateTime? ModifiedAt => _modifiedAt;
+        public DateTime? ModifiedAt { get; private set; }
 
-        public Guid? ModifiedBy => _modifiedBy;
+        public Guid? ModifiedBy { get; private set; }
 
-        public bool IsDeleted => _isDeleted;
+        public bool IsDeleted { get; private set; }
 
         protected BaseEntity(Guid id)
         {
-            Id = id;
+            Id=id;
         }
-     
 
         //برای اینکه در 
         //ef core

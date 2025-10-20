@@ -71,8 +71,6 @@ namespace SmartExpenseTracker.Infra.Persistence.EntityConfigurations
                 .HasDatabaseName("IX_Users_RefreshToken")
                 .HasFilter("[RefreshTokenHash] IS NOT NULL");
 
-            builder.HasIndex(u => u.CreatedAt)
-                .HasDatabaseName("IX_Users_CreatedAt");
 
             // Composite Index for Login
             builder.HasIndex(u => new { u.UserName, u.IsActive })

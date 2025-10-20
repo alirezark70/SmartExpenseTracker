@@ -1,4 +1,5 @@
-﻿using SmartExpenseTracker.Core.Domain.Events.Base;
+﻿using SmartExpenseTracker.Core.Domain.DomainModels.Common;
+using SmartExpenseTracker.Core.Domain.Events.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;

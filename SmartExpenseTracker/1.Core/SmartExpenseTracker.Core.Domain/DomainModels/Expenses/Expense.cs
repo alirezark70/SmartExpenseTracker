@@ -13,11 +13,9 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
     public class Expense : BaseEntity
     {
         private  Guid _id;
-        private readonly DateTime _createdAt;
-        public Expense(Guid id, DateTime createdAt) : base(id)
+        public Expense(Guid id) : base(id)
         {
             _id = id;
-            _createdAt = createdAt;
         }
         public Expense(
             Guid id,
@@ -27,7 +25,7 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
         ExpenseCategory category,
         DateTime expenseDate,
         Guid userId,
-        PaymentMethod paymentMethod) : this(id,createdAt)
+        PaymentMethod paymentMethod) : this(id)
         {
             SetAmount(amount);
             SetDescription(description);
@@ -36,7 +34,6 @@ namespace SmartExpenseTracker.Core.Domain.DomainModels.Expenses
             _userId = userId;
             _paymentMethod = paymentMethod;
             _id=id;
-            _createdAt= createdAt;
         }
         public void UpdateAmount(Money newAmount)
         {

@@ -1,0 +1,6 @@
+path 
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker>
+
+command 
+dotnet ef migrations add intialMig
+dotnet ef database update

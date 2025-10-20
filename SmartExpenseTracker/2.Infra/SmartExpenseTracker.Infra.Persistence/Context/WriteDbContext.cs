@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using SmartExpenseTracker.Core.ApplicationService.Contracts;
 using SmartExpenseTracker.Core.ApplicationService.Contracts.Base;
 using SmartExpenseTracker.Core.Domain.Contracts.Common;
@@ -27,13 +28,15 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
     {
         private readonly ICustomContextAccessor? _contextAccessor;
         private readonly IDateTimeProvider? _dateTimeProvider;
-
+        private readonly AuditInterceptor _auditInterceptor;
         public WriteDbContext(
             DbContextOptions<WriteDbContext> options,
-            ICustomContextAccessor? contextAccessor, IDateTimeProvider? dateTimeProvider) : base(options)
+            ICustomContextAccessor? contextAccessor, IDateTimeProvider? dateTimeProvider, AuditInterceptor auditInterceptor) : base(options)
         {
             _contextAccessor = contextAccessor;
             _dateTimeProvider = dateTimeProvider;
+            _auditInterceptor = auditInterceptor;
+            _auditInterceptor = auditInterceptor;
         }
 
         public WriteDbContext(DbContextOptions<WriteDbContext> options) : base(options)
@@ -46,34 +49,39 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
         public DbSet<UserLoginHistory> UserLoginHistories => Set<UserLoginHistory>();
         public DbSet<UserActivity> UserActivities => Set<UserActivity>();
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.AddInterceptors(_auditInterceptor);
+        }
 
-
+       
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
             
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             builder.Entity<ApplicationUser>(entity =>
             {
-                entity.ToTable("Users");
+                entity.ToTable("Users", "Identity");
                 entity.Property(u => u.FirstName).HasMaxLength(50).IsRequired();
                 entity.Property(u => u.LastName).HasMaxLength(50).IsRequired();
             });
 
-            foreach(var entityType in builder.Model.GetEntityTypes())
-            {
-                if(typeof(IBaseEntity).IsAssignableFrom(entityType.ClrType))
-                {
-                    var b = builder.Entity(entityType.ClrType);
+            //foreach(var entityType in builder.Model.GetEntityTypes())
+            //{
+            //    if(typeof(IBaseEntity).IsAssignableFrom(entityType.ClrType))
+            //    {
+            //        var b = builder.Entity(entityType.ClrType);
 
-                    b.Property(nameof(BaseEntity.CreatedAt)).HasField("_createdAt");
-                    b.Property(nameof(BaseEntity.CreatedBy)).HasField("_createdBy");
-                    b.Property(nameof(BaseEntity.ModifiedAt)).HasField("_modifiedAt");
-                    b.Property(nameof(BaseEntity.ModifiedBy)).HasField("_modifiedBy");
-                    b.Property(nameof(BaseEntity.IsDeleted)).HasField("_isDeleted");
-                }
-            }
+            //        b.Property(nameof(BaseEntity.CreatedAt)).HasField("_createdAt");
+            //        b.Property(nameof(BaseEntity.CreatedBy)).HasField("_createdBy");
+            //        b.Property(nameof(BaseEntity.ModifiedAt)).HasField("_modifiedAt");
+            //        b.Property(nameof(BaseEntity.ModifiedBy)).HasField("_modifiedBy");
+            //        b.Property(nameof(BaseEntity.IsDeleted)).HasField("_isDeleted");
+            //    }
+            //}
 
             foreach (var entityType in builder.Model.GetEntityTypes()
                  .Where(t => typeof(IBaseEntity).IsAssignableFrom(t.ClrType)))
@@ -89,12 +97,12 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
 
             builder.Entity<ApplicationRole>(entity =>
             {
-                entity.ToTable("Roles");
+                entity.ToTable("Roles", "Identity");
             });
 
             builder.Entity<ApplicationUserRole>(entity =>
             {
-                entity.ToTable("UserRoles");
+                entity.ToTable("UserRoles", "Identity");
 
                 entity.HasOne(ur => ur.User)
                     .WithMany(u => u.UserRoles)
@@ -107,58 +115,54 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
                     .IsRequired();
             });
 
-            builder.Entity<IdentityUserClaim<Guid>>().ToTable("UserClaims");
-            builder.Entity<IdentityUserLogin<Guid>>().ToTable("UserLogins");
-            builder.Entity<IdentityRoleClaim<Guid>>().ToTable("RoleClaims");
-            builder.Entity<IdentityUserToken<Guid>>().ToTable("UserTokens");
+            builder.Entity<IdentityUserClaim<Guid>>().ToTable("UserClaims", "Identity");
+            builder.Entity<IdentityUserLogin<Guid>>().ToTable("UserLogins", "Identity");
+            builder.Entity<IdentityRoleClaim<Guid>>().ToTable("RoleClaims", "Identity");
+            builder.Entity<IdentityUserToken<Guid>>().ToTable("UserTokens","Identity");
 
             SeedRoles(builder);
         }
 
     
 
-        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            await BeforeSaveChangesAsync();
-            return await base.SaveChangesAsync(cancellationToken);
-        }
+       
 
 
-        private async Task BeforeSaveChangesAsync()
-        {
-            var entries = ChangeTracker.Entries<IBaseEntity>()
-                .Where(e => e.State is EntityState.Added
-                         or EntityState.Modified
-                         or EntityState.Deleted);
+        //private async Task BeforeSaveChangesAsync()
+        //{
+        //    var entries = ChangeTracker.Entries<IBaseEntity>()
+        //        .Where(e => e.State is EntityState.Added
+        //                 or EntityState.Modified
+        //                 or EntityState.Deleted);
 
-            var currentTime = _dateTimeProvider?.GetDateTimeUtcNow() ?? DateTime.UtcNow;
-            var currentUser = _contextAccessor?.UserId;
+        //    var currentTime = _dateTimeProvider?.GetDateTimeUtcNow() ?? DateTime.UtcNow;
+        //    var currentUser = _contextAccessor?.UserId;
 
-            foreach (var entry in entries)
-            {
-                switch (entry.State)
-                {
-                    case EntityState.Added:
-                        entry.Property(nameof(BaseEntity.CreatedAt)).CurrentValue = currentTime;
-                        entry.Property(nameof(BaseEntity.CreatedBy)).CurrentValue = currentUser;                    
-                        break;
+        //    foreach (var entry in entries)
+        //    {
+        //        switch (entry.State)
+        //        {
+        //            case EntityState.Added:
+        //                entry.Property(nameof(BaseEntity.CreatedAt)).CurrentValue = currentTime;
+        //                entry.Property(nameof(BaseEntity.CreatedBy)).CurrentValue = currentUser;                    
+        //                break;
 
-                    case EntityState.Modified:
-                        entry.Property(nameof(BaseEntity.ModifiedAt)).CurrentValue = currentTime;
-                        entry.Property(nameof(BaseEntity.ModifiedBy)).CurrentValue = currentUser;
-                        break;
+        //            case EntityState.Modified:
+        //                entry.Property(nameof(BaseEntity.ModifiedAt)).CurrentValue = currentTime;
+        //                entry.Property(nameof(BaseEntity.ModifiedBy)).CurrentValue = currentUser;
+        //                break;
 
-                    case EntityState.Deleted:
-                        entry.State = EntityState.Modified;
-                        entry.Property(nameof(BaseEntity.IsDeleted)).CurrentValue = true;
-                        entry.Property(nameof(BaseEntity.ModifiedAt)).CurrentValue = currentTime;
-                        entry.Property(nameof(BaseEntity.ModifiedBy)).CurrentValue = currentUser;
-                        break;
-                }
-            }
+        //            case EntityState.Deleted:
+        //                entry.State = EntityState.Modified;
+        //                entry.Property(nameof(BaseEntity.IsDeleted)).CurrentValue = true;
+        //                entry.Property(nameof(BaseEntity.ModifiedAt)).CurrentValue = currentTime;
+        //                entry.Property(nameof(BaseEntity.ModifiedBy)).CurrentValue = currentUser;
+        //                break;
+        //        }
+        //    }
 
-            await Task.CompletedTask;
-        }
+        //    await Task.CompletedTask;
+        //}
 
         public async Task PublishDomainEventsAsync(CancellationToken cancellationToken = default)
         {
@@ -191,14 +195,14 @@ namespace SmartExpenseTracker.Infra.Persistence.Context
                 Id = Guid.Parse("a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"),
                 Name = "Admin",
                 NormalizedName = "ADMIN",
-                ConcurrencyStamp = Guid.NewGuid().ToString()
+                ConcurrencyStamp = "a1b2c3d4-e5f6-4a5b-1c9d-0e1f253b4c5d"
             },
             new ApplicationRole("کاربر عادی")
             {
                 Id = Guid.Parse("b2c3d4e5-f6a7-4b6c-9d0e-1f2a3b4c5d6e"),
                 Name = "User",
                 NormalizedName = "USER",
-                ConcurrencyStamp = Guid.NewGuid().ToString()
+                ConcurrencyStamp = "b2c374e5-f6a7-4b6c-950e-1f2a3b4c5d6e"
             }
         };
 
