@@ -249,6 +249,7 @@ C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExp.BEBF9DA6.Up2Date
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\SmartExpenseTracker.EndPoint.RestApi.dll
 C:\Users\email\source\repos\alirezark70\SmartExpenseTracker\SmartExpenseTracker\3.EndPoint\SmartExpenseTracker.EndPoint.RestApi\obj\Debug\net9.0\refint\SmartExpenseTracker.EndPoint.RestApi.dll
