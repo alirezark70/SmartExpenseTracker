@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartExpenseTracker.Core.ApplicationService.Contracts.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartExpenseTracker.Infra.Redis.Configuration
 {
-    public class RedisSettings
+    public class RedisSettings : IRedisSettings
     {
         public const string SectionName = "Redis";
 
