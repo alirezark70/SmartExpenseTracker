@@ -1,0 +1,11 @@
+# پاک کردن container های قبلی
+docker-compose down
+
+# اجرای مجدد
+docker-compose up -d
+
+# چک کردن وضعیت
+docker-compose ps
+
+# بررسی لاگ‌ها
+docker-compose logs redis
